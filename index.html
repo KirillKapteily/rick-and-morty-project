@@ -5,75 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./sass/main.css">
 </head>
 
 <body>
     <header>
-        <ul class="header-list">
-            <li class="header-item"><a href="#" class="header-link">Characters</a></li>
-            <li class="header-item"><a href="episodes.html" class="header-link">Episodes</a></li>
-        </ul>
-<div>
-<svg class="search-ico"><use href="./kirillimg/symbol-defs.svg#icon-search" width="18" height="18"></use></svg>
-    <input type="text" placeholder="Search" class="header-search">
-</div>
+        <div class="container">
+            <div class="header-wrapper">
+                <ul class="header-list">
+                    <li class="header-item"><a href="#" class="header-link accent">Characters</a></li>
+                    <li class="header-item"><a href="episodes.html" class="header-link not-accent">Episodes</a></li>
+                </ul>
+                <div class="search-wrapper">
+                    <svg class="search-ico">
+                        <use href="./kirillimg/symbol-defs.svg#icon-search" width="18" height="18"></use>
+                    </svg>
+                    <input type="text" placeholder="Search" class="header-search">
+                </div>
+            </div>
+        </div>
+
     </header>
     <main>
-        <section>
-            <p class="hero-text">If you're a fan of Rick and Morty, you don't want to miss out on our app! Start
-                exploring the endless possibilities of Rick and Morty!</p>
-            <div class="logo-wrapper">
-                <ul class="main-list">
-                    <li class="main-item"><img src="./kirillimg/image.svg" alt="ilustration" class="main-img"></li>
-                    <li class="main-item"><img src="./kirillimg/logo.svg" alt="logo" class="main-img"></li>
-                </ul>
+        <section class="hero">
+            <div class="container">
+ <div class="hero-wrapper">
+                    <p class="hero-text">If you're a fan of Rick and Morty, you <br> don't want to miss out on our app!
+                        <br>
+                        Start
+                        exploring the endless <br> possibilities of Rick and Morty!
+                    </p>
+                    <div class="logo-wrapper">
+                        <ul class="main-list">
+                            <li class="main-item"><img src="./kirillimg/image.svg" alt="ilustration" class="main-img"
+                                    width="532"></li>
+                            <li class="main-item"><img src="./kirillimg/logo.svg" alt="logo" class="main-img"
+                                    width="462"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button type="button" class="down-btn"><svg class="down-ico">
+                        <use href="./kirillimg/symbol-defs.svg#icon-down" width="40" height="40"></use>
+                    </svg></button>
             </div>
-            <button type="button" class="down-btn"><svg class="down-ico"><use href="./kirillimg/symbol-defs.svg#icon-down" width="40" height="40"></use></svg></button>
+               
         </section>
         <section>
-            <h2>Main characters</h2>
-            <div><img src="./kirillimg/image 15.png" alt="person"></div>
-            <div>
-                <ul class="main-characters-list">
-                    <li class="main-characters-item">
-                        <h3 class="main-characters-title">Rick Sanchez</h3>
-                        <p class="main-characters-paragraph">Rick Sanchez is a brilliant but deeply troubled scientist
-                            and one of the main characters in the animated TV show Rick and Morty. </p>
-                        <hr class="main-characters-hr">
-                    </li>
-                    <li class="main-characters-item">
-                        <h3 class="main-characters-title">Morty Smith</h3>
-                        <p class="main-characters-paragraph">Morty Smith is the other main character in the animated TV
-                            show Rick and Morty, and Rick's grandson. </p>
-                        <hr class="main-characters-hr">
-                    </li>
-                    <li class="main-characters-item">
-                        <h3 class="main-characters-title">Summer Smith</h3>
-                        <p class="main-characters-paragraph">Summer Smith is Morty's older sister and one of the main
-                            characters in Rick and Morty. Initially portrayed as a typical teenager, she develops into a
-                            more complex and independent character, who is intelligent, resourceful, and fiercely loyal
-                            to her family. </p>
-                        <hr class="main-characters-hr">
-                    </li>
-                    <li class="main-characters-item">
-                        <h3 class="main-characters-title">Beth Smith</h3>
-                        <p class="main-characters-paragraph">Beth is a horse surgeon, and, as Rick's daughter, she is
-                            intelligent if sometimes cold. She is voiced by Sarah Chalke.</p>
-                        <hr class="main-characters-hr">
-                    </li>
-                    <li class="main-characters-item">
-                        <h3 class="main-characters-title">Jerry Smith</h3>
-                        <p class="main-characters-paragraph">Jerry is the husband of Beth Smith, the father of Summer
-                            Smith and Morty Smith, and the son-in-law of Rick Sanchez.</p>
-                        <hr class="main-characters-hr">
-                    </li>
-                </ul>
-            </div>
+            <img src="./kirillimg/Tags.svg" alt="d">
         </section>
-        <section>
-            <h2 class="main-images-title">Ready to explore the crazy <br>
-                world of Rick and Morty?</h2>
+        <section class="main-char-home-sect">
+            <div class="container">
+                <h2 class="main-title"><span class="main-span">Main</span> characters</h2>
+            <div class="whole-char-wrapper">
+                <div class="main-charecters-title-wrapper">
+                    <div class="background-char"><img src="./kirillimg/image 15.png" alt="person" class="main-img"></div>
+                </div>
+
+                <div class="main-harecters-wrapper">
+                    <ul class="main-characters-list">
+                        <li class="main-characters-item">
+                            <h3 class="main-characters-title">Rick Sanchez</h3>
+                            <p class="main-characters-paragraph">Rick Sanchez is a brilliant but deeply troubled
+                                scientist
+                                and one of the main characters in the animated TV show Rick and Morty. </p>
+                            <hr class="main-characters-hr">
+                        </li>
+                        <li class="main-characters-item">
+                            <h3 class="main-characters-title">Morty Smith</h3>
+                            <p class="main-characters-paragraph">Morty Smith is the other main character in the
+                                animated TV
+                                show Rick and Morty, and Rick's grandson. </p>
+                            <hr class="main-characters-hr">
+                        </li>
+                        <li class="main-characters-item">
+                            <h3 class="main-characters-title">Summer Smith</h3>
+                            <p class="main-characters-paragraph">Summer Smith is Morty's older sister and one of the
+                                main
+                                characters in Rick and Morty. Initially portrayed as a typical teenager, she
+                                develops into a
+                                more complex and independent character, who is intelligent, resourceful, and
+                                fiercely loyal
+                                to her family. </p>
+                            <hr class="main-characters-hr">
+                        </li>
+                        <li class="main-characters-item">
+                            <h3 class="main-characters-title">Beth Smith</h3>
+                            <p class="main-characters-paragraph">Beth is a horse surgeon, and, as Rick's daughter,
+                                she is
+                                intelligent if sometimes cold. She is voiced by Sarah Chalke.</p>
+                            <hr class="main-characters-hr">
+                        </li>
+                        <li class="main-characters-item">
+                            <h3 class="main-characters-title">Jerry Smith</h3>
+                            <p class="main-characters-paragraph">Jerry is the husband of Beth Smith, the father of
+                                Summer
+                                Smith and Morty Smith, and the son-in-law of Rick Sanchez.</p>
+                            <hr class="main-characters-hr">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <!-- </div> -->
+        </section>
+        <section class="slider-sect">
+            <div class="container">
+                <h2 class="main-images-title">Ready to <span class="images-explore">explore</span> the crazy <br>
+                    world of Rick and Morty?</h2>
+            </div>
             <ul class="main-images-list">
                 <li class="main-images-item"><img src="./kirillimg/image.png" alt="1"></li>
                 <li class="main-images-item"><img src="./kirillimg/image-1.png" alt="2"></li>
@@ -81,26 +125,51 @@
                 <li class="main-images-item"><img src="./kirillimg/image-3.png" alt="4"></li>
                 <li class="main-images-item"><img src="./kirillimg/image-4.png" alt="5"></li>
             </ul>
-            <button type="button" class="main-images-btn">Episodes</button>
+            <div class="container">
+                <button type="button" class="main-images-btn">Episodes</button>
+            </div>
         </section>
+
+
     </main>
     <footer>
-        <div>
-            <img src="./kirillimg/logofooter.svg" alt="logo">
-            <img src="./kirillimg/pills.svg" alt="pills">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="logo-footer-wrapper">
+                    <img src="./kirillimg/logofooter.svg" alt="logo" class="footer-logo-piece-1">
+                    <img src="./kirillimg/pills.svg" alt="pills" class="footer-logo-piece-2">
+                </div>
+                <div class="footer-nav-list">
+                    <ul class="footer-nav-list">
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">Characters</a></li>
+                        <li class="footer-nav-item"><a href="episodes.html" class="footer-nav-link">Episodes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-wrapper">
+                    <ul class="footer-contacts-list">
+                        <li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg
+                                    class="social-ico">
+                                    <use href="./kirillimg/symbol-defs.svg#icon-facebook" width="12" height="24"></use>
+                                </svg></a></li>
+                        <li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg
+                                    class="social-ico2">
+                                    <use href="./kirillimg/symbol-defs.svg#icon-twitter" width="28" height="28"></use>
+                                </svg></a></a></li>
+                        <li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg
+                                    class="social-ico3">
+                                    <use href="./kirillimg/symbol-defs.svg#icon-insta" width="26.13" height="26.13">
+                                    </use>
+                                </svg></a></a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div>
+                <p class="privacy">Privacy Policy Public Offering Agreement</p>
+            </div>
         </div>
 
-        <ul class="footer-nav-list">
-<li class="footer-nav-item"><a href="#" class="footer-nav-link">Characters</a></li>
-<li class="footer-nav-item"><a href="episodes.html" class="footer-nav-link">Episodes</a></li>
-        </ul>
-          <ul class="footer-contacts-list">
-<li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg class="social-ico"><use href="./kirillimg/symbol-defs.svg#icon-facebook" width="12" height="24"></use></svg></a></li>
-<li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg class="social-ico"><use href="./kirillimg/symbol-defs.svg#icon-twitter" width="28" height="28"></use></svg></a></a></li>
-<li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg class="social-ico"><use href="./kirillimg/symbol-defs.svg#icon-insta" width="26.13" height="26.13"></use></svg></a></a></li>
-        </ul>
-
-        <p class="privacy">Privacy Policy Public Offering Agreement</p>
     </footer>
     <script src="kirill.js"></script>
 </body>

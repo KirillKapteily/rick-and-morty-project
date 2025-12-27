@@ -1,1 +1,261 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 1185px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(13, 23, 29);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-wrapper {
+  display: flex;
+  padding: 12px 24px 12px 24px;
+  border: 1px solid rgba(250, 250, 250, 0.3);
+  border-radius: 1000px;
+}
+
+.header-search {
+  color: white;
+  background-color: rgb(13, 23, 29);
+  border: none;
+}
+
+.search-ico {
+  width: 18px;
+  height: 18px;
+}
+
+.header-list {
+  list-style: none;
+  display: flex;
+}
+
+.accent {
+  background: rgb(161, 215, 55);
+}
+
+.not-accent {
+  border: 1px solid rgba(250, 250, 250, 0.3);
+}
+
+.header-link {
+  border-radius: 1000px;
+  color: white;
+  padding: 12px 24px 12px 24px;
+  text-decoration: none;
+  color: rgb(13, 23, 29);
+  font-family: Montserrat;
+  font-style: SemiBold;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.hero {
+  background-color: rgb(13, 23, 29);
+  margin-top: 54px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.main-span {
+  color: white;
+  background-color: rgb(13, 23, 29);
+  border-radius: 100px;
+  padding: 4px 17px 4px 17px;
+}
+
+.main-images-list {
+  padding-inline-start: 0px !important;
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.main-images-btn {
+  border-radius: 1000px;
+  color: rgb(13, 23, 29);
+  text-decoration: none;
+  font-style: SemiBold;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  border: none;
+  padding: 12px 24px 12px 24px;
+  background: rgb(161, 215, 55);
+}
+
+.images-explore {
+  background-color: #A1D737;
+  border-radius: 100px;
+  padding: 4px 17px 4px 17px;
+}
+
+.background-char {
+  background-color: #A1D737;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0%;
+  border-radius: 100px;
+  padding: 33px 69px 33px 69px;
+}
+
+.background-correcter {
+  background-color: rgb(13, 23, 29);
+}
+
+.main-char-home-sect {
+  margin-top: 145px;
+  margin-bottom: 128px;
+}
+
+.main-images-title {
+  color: rgb(250, 250, 250);
+}
+
+.slider-sect {
+  background-color: rgb(13, 23, 29);
+  padding-top: 100px;
+  padding-bottom: 170px;
+  border-radius: 50px;
+}
+
+.main-characters-hr {
+  border: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.main-characters-list {
+  list-style: none;
+}
+
+.whole-char-wrapper {
+  display: flex;
+}
+
+.hero-text {
+  color: white;
+  font-family: "Montserrat";
+  font-style: Regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.main-list {
+  padding-inline-start: 0px;
+  list-style: none;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title {
+  font-style: SemiBold;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 44px;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.down-ico {
+  width: 40px;
+  height: 40px;
+}
+
+.down-btn {
+  background-color: rgba(250, 128, 114, 0);
+  border-radius: 100px;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.social-ico {
+  width: 12px;
+  height: 24px;
+}
+
+.social-ico2 {
+  width: 28px;
+  height: 28px;
+}
+
+.social-ico3 {
+  width: 26.13px;
+  height: 26.13px;
+}
+
+.footer-nav-link {
+  color: rgb(13, 23, 29);
+  text-decoration: none;
+}
+
+.footer-nav-list {
+  list-style: none;
+}
+
+.footer-contacts-list {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.footer-nav-item {
+  margin-bottom: 16px;
+}
+
+.footer-contacts-item {
+  box-sizing: border-box;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 12px;
+  padding: 16px 16px 16px 16px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo-piece-1 {
+  position: relative;
+  left: 30px;
+}
+
+.footer-logo-piece-2 {
+  position: relative;
+  right: 100px;
+  top: 50px;
+}
+
+.privacy {
+  margin-top: 128px;
+  color: rgba(17, 17, 17, 0.4);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
