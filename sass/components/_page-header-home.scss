@@ -1,8 +1,13 @@
-header{
-    display: flex;
+// header{
+ 
+// }
+
+.header-my-home{
+       display: flex;
     align-items: center;
     background-color: $backgroundColor;
 }
+
 .header-wrapper{
 display: flex;
 justify-content: space-between;
@@ -35,13 +40,13 @@ background: rgba(161, 215, 55, 1);
 }
 
 .not-accent{
-    
+        color: white!important;
     border: 1px solid rgba(250, 250, 250, 0.3);
 }
 
 .header-link{
     border-radius: 1000px;
-    color: white;
+
 padding: 12px 24px 12px 24px;
 text-decoration: none;
 color: rgba(13, 23, 29, 1);

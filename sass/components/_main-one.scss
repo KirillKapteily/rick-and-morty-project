@@ -45,6 +45,7 @@ font-weight: 600;
 line-height: 48px;
 letter-spacing: 0%;
 border-radius: 100px;
+
 padding: 33px 69px 33px 69px;
 }
 
@@ -66,6 +67,7 @@ padding: 33px 69px 33px 69px;
     padding-top: 100px;
     padding-bottom: 170px;
     border-radius: 50px;
+    overflow: hidden;
 }
 
 .main-characters-hr{
@@ -97,6 +99,12 @@ align-items: center;
     list-style: none;
 }
 
+.main-img{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 .logo-wrapper{
     display: flex;
     align-items: center;
@@ -108,6 +116,7 @@ align-items: center;
 font-size: 44px;
 font-weight: 600;
 line-height: 44px;
+margin-bottom: 72px;
 }
 
 .hero-wrapper{

@@ -5,48 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Episodes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./sass/main.css">
 </head>
 
 <body>
-    <header>
-   <a href="index.html">   <img src="./kirillimg/mainlogo.webp" alt="logo" width="135"></a>
-        <div>
-            <svg class="search-ico">
-                <use href="./kirillimg/symbol-defs.svg#icon-search" width="18" height="18"></use>
-            </svg>
-            <input type="text" placeholder="Search" class="header-search">
+    <header class="header-my-home">
+        <div class="header-wrapper">
+            <div>
+                <a href="index.html"> <img src="./kirillimg/mainlogo.webp" alt="logo" width="135"></a>
+            </div>
+
+            <div>
+                <svg class="search-ico">
+                    <use href="./kirillimg/symbol-defs.svg#icon-search" width="18" height="18"></use>
+                </svg>
+                <input type="text" placeholder="Search" class="header-search">
+            </div>
         </div>
     </header>
     <main>
-        <section>
-            <h1 class="hero-title">Episodes</h1>
-            <p class="hero-text">With a comprehensive guide to every episode, you can relive your favorite moments and
-                discover new ones. From the bizarre and hilarious to the emotional and thought-provoking, our episode
-                guide covers it all.</p>
-            <div class="imgs-hero">
-                <img src="./kirillimg/image.svg" alt="ilustration" class="main-img">
+        <section class="hero-episodes">
+            <div class="container">
+                <div class="hero-episodes-wrapper">
+                    <div class="text-hore-episodes-wrapper">
+                        <h1 class="hero-title">Episodes</h1>
+                        <p class="hero-text">With a comprehensive guide to every episode, you can <br> relive your
+                            favorite moments
+                            and
+                            discover new ones. From <br> the bizarre and hilarious to the emotional and thought- <br>
+                            provoking, our
+                            episode
+                            guide covers it all.</p>
+                        <button class="hero-btn">Back home</button>
+                    </div>
+
+
+                    <div class="imgs-hero-ep">
+                        <img src="./kirillimg/episodesmaining.png" alt="ilustration" class="main-img">
+                    </div>
+
+                </div>
             </div>
-            <button class="hero-btn">Back home</button>
-            <button type="button" class="down-btn"><svg class="down-ico">
-                    <use href="./kirillimg/symbol-defs.svg#icon-down" width="40" height="40"></use>
-                </svg></button>
+
+        </section>
+        <section class="img-sect">
+            <img src="./kirillimg/Tags.svg" alt="d">
         </section>
         <section>
-            <div>
-                <p class="main-input-paragraph">Name</p>
-                <input type="Enter name" class="main-input-name">
+            <div class="inputs-wrapper">
+                <div>
+                    <p class="main-input-paragraph">Name</p>
+                    <input placeholder="Enter name" class="main-input-name">
+                </div>
+                <div>
+                    <p class="main-input-paragraph">Episode code</p>
+                    <input placeholder="All season" class="main-input-season">
+                </div>
             </div>
-            <div>
-                <p class="main-input-paragraph">Episode code</p>
-                <input type="All season" class="main-input-season">
-            </div>
+
+
             <div>result (placeholder)</div>
             <button type="button" class="load-more-btn">Load more</button>
         </section>
     </main>
     <footer>
-       <div class="container">
+        <div class="container">
             <div class="footer-wrapper">
                 <div class="logo-footer-wrapper">
                     <img src="./kirillimg/logofooter.svg" alt="logo" class="footer-logo-piece-1">
