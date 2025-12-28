@@ -2,3 +2,34 @@
     width: 1185px;
      margin: 0 auto;
 }
+
+@media (min-width:704px) and (max-width:1199px) {
+    .container {
+        max-width: 704px;
+    }
+
+    .hero-wrapper{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+
+.tags{
+        max-width: 704px;
+
+    overflow: hidden;
+}
+
+.whole-char-wrapper{
+            flex-wrap: wrap;
+}
+
+.background-char{
+padding: 33px 154px 33px 154px!important;
+}
+
+.main-images-title{
+    font-size: 44px;
+font-weight: 600;
+}
+}
