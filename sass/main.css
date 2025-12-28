@@ -86,6 +86,20 @@ body {
   line-height: 18px;
 }
 
+
+.h1-rvevdsf {
+  color: white;
+}
+
+.div-columngap {
+  display: flex;
+}
+
+.img-head-serc {
+  display: flex;
+  justify-content: end;
+}
+
 .hero-episodes {
   padding-top: 100px !important;
   padding-bottom: 126px !important;
