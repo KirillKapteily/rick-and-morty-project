@@ -7,7 +7,31 @@ body {
   margin: 0 auto;
 }
 
-header {
+@media (min-width: 704px) and (max-width: 1199px) {
+  .container {
+    max-width: 704px;
+  }
+  .hero-wrapper, .hero-episodes-wrapper {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+  .tags {
+    max-width: 704px;
+    overflow: hidden;
+  }
+  .whole-char-wrapper {
+    flex-wrap: wrap;
+  }
+  .background-char {
+    padding: 33px 154px 33px 154px !important;
+  }
+  .main-images-title {
+    font-size: 44px;
+    font-weight: 600;
+  }
+}
+.header-my-home {
   display: flex;
   align-items: center;
   background-color: rgb(13, 23, 29);
@@ -46,12 +70,12 @@ header {
 }
 
 .not-accent {
+  color: white !important;
   border: 1px solid rgba(250, 250, 250, 0.3);
 }
 
 .header-link {
   border-radius: 1000px;
-  color: white;
   padding: 12px 24px 12px 24px;
   text-decoration: none;
   color: rgb(13, 23, 29);
@@ -61,6 +85,7 @@ header {
   font-weight: 600;
   line-height: 18px;
 }
+
 
 .h1-rvevdsf {
   color: white;
@@ -75,7 +100,77 @@ header {
   justify-content: end;
 }
 
-.hero {
+.hero-episodes {
+  padding-top: 100px !important;
+  padding-bottom: 126px !important;
+}
+
+.hero-btn {
+  border: 1px solid rgba(250, 250, 250, 0.3);
+  border-radius: 1000px;
+  color: rgb(250, 250, 250);
+  background-color: rgba(240, 248, 255, 0);
+  padding: 12px 24px 12px 24px;
+  margin-top: 32px;
+}
+
+.imgs-hero-ep {
+  border-radius: 100px;
+  background: rgb(161, 215, 55);
+  overflow: hidden;
+}
+
+.hero-title {
+  color: rgb(250, 250, 250);
+  margin-bottom: 16px;
+  font-style: SemiBold;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 100px;
+  letter-spacing: 0px;
+}
+
+.hero-episodes-wrapper {
+  justify-content: space-between;
+}
+
+.main-input-name {
+  color: rgb(13, 23, 29);
+  box-sizing: border-box;
+  border: 1.5px solid rgb(17, 17, 17);
+  border-radius: 100px;
+  background: rgb(218, 248, 54);
+  padding: 16px 24px 16px 24px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 95px;
+}
+
+.main-input-season {
+  box-sizing: border-box;
+  padding: 16px 24px 16px 24px;
+  border: 1.5px solid rgb(17, 17, 17);
+  border-radius: 100px;
+}
+
+.load-more-btn {
+  padding: 12px 24px 12px 24px;
+  border-radius: 1000px;
+  background: rgb(161, 215, 55);
+  color: rgb(13, 23, 29);
+  border: none;
+  display: flex;
+  justify-content: center !important;
+  margin: 0 auto;
+  margin-bottom: 128px;
+  margin-top: 64px;
+}
+
+.hero, .hero-episodes {
   background-color: rgb(13, 23, 29);
   margin-top: 54px;
   border-bottom-left-radius: 50px;
@@ -143,6 +238,7 @@ header {
   padding-top: 100px;
   padding-bottom: 170px;
   border-radius: 50px;
+  overflow: hidden;
 }
 
 .main-characters-hr {
@@ -173,6 +269,12 @@ header {
   list-style: none;
 }
 
+.main-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo-wrapper {
   display: flex;
   align-items: center;
@@ -184,9 +286,10 @@ header {
   font-size: 44px;
   font-weight: 600;
   line-height: 44px;
+  margin-bottom: 72px;
 }
 
-.hero-wrapper {
+.hero-wrapper, .hero-episodes-wrapper {
   display: flex;
   align-items: center;
 }
@@ -253,18 +356,18 @@ header {
 }
 
 .footer-logo-piece-1 {
-  position: relative;
-  left: 30px;
+  position: relative !important;
+  left: 30px !important;
 }
 
 .footer-logo-piece-2 {
-  position: relative;
-  right: 100px;
-  top: 50px;
+  position: relative !important;
+  right: 100px !important;
+  top: 50px !important;
 }
 
 .privacy {
-  margin-top: 128px;
+  margin-top: 128px !important;
   color: rgba(17, 17, 17, 0.4);
   font-size: 14px;
   font-weight: 400;
