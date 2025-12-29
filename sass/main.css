@@ -16,6 +16,12 @@ body {
     display: flex;
     justify-content: center;
   }
+  .hero-text {
+    order: 3;
+  }
+  .logo-wrapper {
+    order: 2;
+  }
   .tags {
     max-width: 704px;
     overflow: hidden;
@@ -29,6 +35,21 @@ body {
   .main-images-title {
     font-size: 44px;
     font-weight: 600;
+  }
+  .footer-logo-piece-1 {
+    position: relative;
+    top: 109px !important;
+  }
+  .footer-logo-piece-2 {
+    position: relative;
+    left: 20px !important;
+  }
+}
+@media (min-width: 335px) and (max-width: 704px) {
+  .hero-wrapper, .hero-episodes-wrapper {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
   }
 }
 .header-my-home {
@@ -178,6 +199,7 @@ body {
 }
 
 .main-images-btn {
+  display: flex;
   border-radius: 1000px;
   color: rgb(13, 23, 29);
   text-decoration: none;
@@ -188,6 +210,8 @@ body {
   border: none;
   padding: 12px 24px 12px 24px;
   background: rgb(161, 215, 55);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .images-explore {
