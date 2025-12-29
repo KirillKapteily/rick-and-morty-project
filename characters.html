@@ -5,39 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Characters</title>
-    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="./sass/components/list.css">
 </head>
 
 <body>
     <header>
-        <section class="section-hea">
-            <div class="">
-                <div class="img-div-hea"><img src="./img-serhiy/logo.png" alt="logo-head"></div>
-                <div class="img-head-serch"><img src="./img-serhiy/search.svg" alt="search"><input type="Search"
-                    name="Search" class="search-header" placeholder="Search">
+        <div class="cont-bacground-head">
+            <div class="container">
+                <section class="section-hea">
+                    <div class="div-head-img-search">
+                        <div class="img-div-hea"><img src="./img-serhiy/logo.png" alt="logo-head"></div>
+                        <div class="img-head-serch"><img src="./img-serhiy/search.svg" class="img-zindex" alt="search"><input type="Search"
+                                name="Search" class="search-header" placeholder="Search">
+                        </div>
+                    </div>
+                    <ul class="ul-header">
+                        <li>
+                            <h1 class="h1-rvevdsf col-wh-head" >Characters</h1>
+                        </li>
+                        <li>
+                            <p class="col-wh-head p-mar-head">Our character bios provide detailed information on every <br> member of the Smith
+                                family and
+                                beyond.
+                                Get to know <br> these unforgettable characters on a whole new level - start <br>
+                                exploring
+                                now!
+                            </p>
+                        </li>
+                        <li><button class="butt-back-home col-wh-head p-mar-head butt-head-style">Back home</button></li>
+                    </ul>
+                    <div class="disp-big-img-head"><img src="./img-serhiy/image.png" alt="head-img" class="img-sec-div-header"></div>
+                </section>
             </div>
-            </div>
-            <ul class="ul-header">
-                <li>
-                    <h1 class="h1-rvevdsf">Characters</h1>
-                </li>
-                <li>
-                    <p>Our character bios provide detailed information on every <br> member of the Smith
-                        family and
-                        beyond.
-                        Get to know <br> these unforgettable characters on a whole new level - start <br> exploring
-                        now!
-                    </p>
-                </li>
-                <li><button class="butt-back-home">Back home</button></li>
-            </ul>
-            <div><img src="./img-serhiy/image.png" alt="head-img" class="img-sec-div-header"></div>
-        </section>
+        </div>
     </header>
-    <div class="container">
-        <main>
+    <main>
+        <div class="container">
             <div class="div-first-sec-img-main">
-                <img src="./kirillimg/Tags.svg" alt="tags" class="img-scroll">
+                <!-- <img src="./kirillimg/Tags.svg" alt="tags" class="img-scroll" width="1408" height="173px"> -->
             </div>
 
             <div class="filter">
@@ -89,8 +94,10 @@
                     <option value="Unknow">Unknow</option>
                 </select>
             </div>
-        </main>
-        <footer>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
             <div class="first-two-img-foot">
                 <img src="./img-serhiy/foot.png" alt="img-foot">
                 <img src="./img-serhiy/element.png" alt="foot-img2">
@@ -105,8 +112,9 @@
                 <img src="./img-serhiy/instagram.png" alt="instagram">
             </div>
             <p class="foot-text">Privacy Policy Public Offering Agreement</p>
-        </footer>
-        <script src="serhiy.js"></script>
+        </div>
+    </footer>
+    <script src="serhiy.js"></script>
 </body>
 
 </html>

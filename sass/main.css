@@ -2,6 +2,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
   width: 1185px;
   margin: 0 auto;
@@ -84,20 +88,6 @@ body {
   font-size: 14px;
   font-weight: 600;
   line-height: 18px;
-}
-
-
-.h1-rvevdsf {
-  color: white;
-}
-
-.div-columngap {
-  display: flex;
-}
-
-.img-head-serc {
-  display: flex;
-  justify-content: end;
 }
 
 .hero-episodes {
