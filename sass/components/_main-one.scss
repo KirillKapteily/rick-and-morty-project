@@ -1,68 +1,71 @@
-.hero{
+.hero {
     background-color: $backgroundColor;
     margin-top: 54px;
     border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
-.main-span{
+.main-span {
     color: white;
     background-color: $backgroundColor;
     border-radius: 100px;
-    padding: 4px 17px 4px 17px;
+    padding: 4px 17px 4px 17px; 
 }
 
-.main-images-list{
-            padding-inline-start: 0px!important;
+.main-images-list {
+    padding-inline-start: 0px !important;
     display: flex;
     gap: 24px;
     list-style: none;
 }
 
-.main-images-btn{
-       border-radius: 1000px;
+.main-images-btn {
+    display: flex;
+    border-radius: 1000px;
     color: $backgroundColor;
     text-decoration: none;
-font-style: SemiBold;
-font-size: 14px;
-font-weight: 600;
-line-height: 18px;
-border: none;
-padding: 12px 24px 12px 24px;
+    font-style: SemiBold;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    border: none;
+    padding: 12px 24px 12px 24px;
     background: rgba(161, 215, 55, 1);
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.images-explore{
+.images-explore {
     background-color: $backgroundColorChar;
     border-radius: 100px;
     padding: 4px 17px 4px 17px;
 }
 
-.background-char{
+.background-char {
     background-color: $backgroundColorChar;
-font-size: 44px;
-font-weight: 600;
-line-height: 48px;
-letter-spacing: 0%;
-border-radius: 100px;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0%;
+    border-radius: 100px;
 
-padding: 33px 69px 33px 69px;
+    padding: 33px 69px 33px 69px;
 }
 
-.background-correcter{
+.background-correcter {
     background-color: $backgroundColor;
 }
 
-.main-char-home-sect{
+.main-char-home-sect {
     margin-top: 145px;
     margin-bottom: 128px;
 }
 
-.main-images-title{
+.main-images-title {
     color: $white;
 }
 
-.slider-sect{
+.slider-sect {
     background-color: $backgroundColor;
     padding-top: 100px;
     padding-bottom: 170px;
@@ -70,71 +73,72 @@ padding: 33px 69px 33px 69px;
     overflow: hidden;
 }
 
-.main-characters-hr{
+.main-characters-hr {
     border: 1px solid rgba(17, 17, 17, 0.2);
 }
 
-.main-characters-list{
+.main-characters-list {
     list-style: none;
 }
 
-.whole-char-wrapper{
+.whole-char-wrapper {
     display: flex;
 }
 
-.hero-text{
+.hero-text {
     color: white;
     font-family: "Montserrat";
-font-style: Regular;
-font-size: 16px;
-font-weight: 400;
-line-height: 18px;
-display: flex;
-// justify-content: center;
-align-items: center;
+    font-style: Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
 }
 
-.main-list{
+.main-list {
     padding-inline-start: 0px;
     list-style: none;
 }
 
-.main-img{
-display: flex;
-justify-content: center;
-align-items: center;
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo-wrapper{
+.logo-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.main-title{
+.main-title {
     font-style: SemiBold;
-font-size: 44px;
-font-weight: 600;
-line-height: 44px;
-margin-bottom: 72px;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 44px;
+    margin-bottom: 72px;
 }
 
-.hero-wrapper{
-display: flex;
-// justify-content: center;
-align-items: center;
+.hero-wrapper {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
 }
 
-.down-ico{
+.down-ico {
     width: 40px;
     height: 40px;
 }
-.down-btn{
+
+.down-btn {
     background-color: rgba(250, 128, 114, 0);
     border-radius: 100px;
     padding: 20px 20px 20px 20px;
     display: flex;
     align-items: center;
     justify-content: end;
-     border: 1px solid rgba(250, 250, 250, 0.5);
+    border: 1px solid rgba(250, 250, 250, 0.5);
 }
