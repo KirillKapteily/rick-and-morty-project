@@ -107,18 +107,21 @@
                     </div>
                 </div>
             </div>
-            <div class="cards-grid" id="items-container">
+            <script id="card-template" type="text/x-handlebars-template">
                 {{#each items}}
-                <div class="card">
-                    <img src="{{this.image}}" alt="{{this.name}}">
-                    <h3>{{this.name}}</h3>
-                    <p>Species: {{this.species}}</p>
-                    <p>Location: {{this.location.name}}</p>
-                </div>
+                  <div class="card">
+                    <img class="img-characters-sec-main" src="{{image}}" alt="{{name}}">
+                    <h3>{{name}}</h3>
+                    <p>Species: {{species}}</p>
+                    <p>Location: {{location.name}}</p>
+                  </div>
                 {{/each}}
-            </div>
+              </script>
+
+            <div id="items-container" class="div-card-character"></div>
+
             <div class="div-main-section-for-characters  more-characters-dis load-more-box">
-                <button  id="load-more-btn" class="more-characters load-more-btn">Load more</button>
+                <button id="load-more-btn" class="more-characters load-more-btn">Load more</button>
             </div>
         </section>
     </main>
