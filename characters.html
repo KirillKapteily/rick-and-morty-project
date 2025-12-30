@@ -14,7 +14,8 @@
             <div class="container">
                 <section class="section-hea">
                     <div class="div-head-img-search">
-                        <div class="img-div-hea"><img src="./img-serhiy/logo.png" alt="logo-head"></div>
+                        <div class="img-div-hea"><a href="index.html"><img src="./img-serhiy/logo.png"
+                                    alt="logo-head"></a></div>
                         <div class="img-head-serch"><img src="./img-serhiy/search.svg" class="img-zindex"
                                 alt="search"><input type="Search" name="Search" class="search-header"
                                 placeholder="Search">
@@ -34,7 +35,8 @@
                                 now!
                             </p>
                         </li>
-                        <li><button class="butt-back-home col-wh-head p-mar-head butt-head-style">Back home</button>
+                        <li><a href="index.html"><button type="button"
+                                    class="butt-back-home col-wh-head p-mar-head butt-head-style">Back home</button></a>
                         </li>
                     </ul>
                     <div class="disp-big-img-head"><img src="./img-serhiy/image.png" alt="head-img"
@@ -105,8 +107,18 @@
                     </div>
                 </div>
             </div>
-            <div class="div-main-section-for-characters  more-characters-dis">
-                <button type="button" class="more-characters">Load more</button>
+            <div class="cards-grid" id="items-container">
+                {{#each items}}
+                <div class="card">
+                    <img src="{{this.image}}" alt="{{this.name}}">
+                    <h3>{{this.name}}</h3>
+                    <p>Species: {{this.species}}</p>
+                    <p>Location: {{this.location.name}}</p>
+                </div>
+                {{/each}}
+            </div>
+            <div class="div-main-section-for-characters  more-characters-dis load-more-box">
+                <button  id="load-more-btn" class="more-characters load-more-btn">Load more</button>
             </div>
         </section>
     </main>
@@ -119,8 +131,8 @@
                 </div>
                 <p class="two-span-foot">Characters <br>Episodes </p>
                 <div class="three-img-foot">
-                    <img class="img-footer-character" src="./img-serhiy/facebook.png" alt="facebook">
-                    <img class="img-footer-character" src="./img-serhiy/twitter.png" alt="twitter">
+                    <a href=""><img class="img-footer-character" src="./img-serhiy/facebook.png" alt="facebook"></a>
+                    <a href=""><img class="img-footer-character" src="./img-serhiy/twitter.png" alt="twitter"></a>
                     <img class="img-footer-character" src="./img-serhiy/instagram.png" alt="instagram">
                 </div>
                 <p class="foot-text">Privacy Policy Public Offering Agreement</p>
