@@ -1,5 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0px;
 }
 
 ul {
@@ -40,6 +41,9 @@ ul {
     font-size: 44px;
     font-weight: 600;
   }
+  .hero-btn {
+    margin-bottom: 40px;
+  }
   .footer-logo-piece-1 {
     position: relative;
     top: 109px !important;
@@ -68,8 +72,28 @@ ul {
     max-width: 335px;
     overflow: hidden;
   }
+  .hero-title {
+    font-size: 40px !important;
+  }
+  .hero-btn {
+    margin-bottom: 40px;
+  }
+  .inputs-wrapper {
+    flex-direction: column;
+  }
+  .main-input-name {
+    width: 335px !important;
+  }
+  .main-input-season {
+    width: 335px !important;
+  }
   .whole-char-wrapper {
     flex-wrap: wrap;
+  }
+  .main-title {
+    font-size: 28px !important;
+    font-weight: 600;
+    line-height: 32px;
   }
   .background-char {
     padding: 16px 10px 16px 10px !important;
