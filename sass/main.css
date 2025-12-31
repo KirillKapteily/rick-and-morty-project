@@ -221,7 +221,7 @@ ul {
 
 .hero, .hero-episodes {
   background-color: rgb(13, 23, 29);
-  margin-top: 54px;
+  padding-top: 54px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
