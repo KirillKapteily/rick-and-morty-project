@@ -243,6 +243,37 @@ ul {
   margin-top: 64px;
 }
 
+.episodes-list {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card-episodes {
+  width: 1184px;
+  height: 200px;
+  border: 1px #A1D737;
+  border-radius: 10px;
+  background-image: url("../../kirillimg/epiback.png");
+  background-repeat: no-repeat;
+}
+
+.card-epi-title {
+  color: rgb(161, 215, 55);
+  font-family: Montserrat;
+  font-style: SemiBold;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0%;
+}
+
+.card-epi-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
 .hero, .hero-episodes {
   background-color: rgb(13, 23, 29);
   padding-top: 54px;
