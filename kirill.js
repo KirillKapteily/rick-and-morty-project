@@ -190,11 +190,13 @@ function renderPosts(posts) {
     const markup = posts
         .map(({ title, seaeson, airDate }) => {
             return `<li class="card-episodes">
-         <p><strong>${title}</strong></p>
-    <p>Air date <br>
-        ${airDate}</p>
-    <p>Season <br>
+         <p class="card-epi-title"><strong>${title}</strong></p>
+         <div class="card-epi-wrapper">
+          <p>Season <br>
        ${seaeson}</p>
+ <p>Air date <br>
+        ${airDate}</p>
+         </div>
         </li>`;
         })
         .join("");
