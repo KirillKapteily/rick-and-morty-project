@@ -1,102 +1,102 @@
-.hero-episodes{
+.hero-episodes {
     @extend .hero;
-    padding-top: 100px!important;
-        padding-bottom: 126px!important;
+    padding-top: 100px !important;
+    padding-bottom: 126px !important;
 }
 
-.hero-btn{
+.hero-btn {
     border: 1px solid rgba(250, 250, 250, 0.3);
-border-radius: 1000px;
-color: $white;
-background-color: rgba(240, 248, 255, 0);
-padding: 12px 24px 12px 24px;
+    border-radius: 1000px;
+    color: $white;
+    background-color: rgba(240, 248, 255, 0);
+    padding: 12px 24px 12px 24px;
     margin-top: 32px;
 }
 
-.imgs-hero-ep{
+.imgs-hero-ep {
     border-radius: 100px;
-background: rgba(161, 215, 55, 1);
-overflow: hidden;
+    background: rgba(161, 215, 55, 1);
+    overflow: hidden;
 }
 
-.hero-title{
+.hero-title {
     color: rgba(250, 250, 250, 1);
     margin-bottom: 16px;
-font-style: SemiBold;
-font-size: 100px;
-font-weight: 600;
-line-height: 100px;
-letter-spacing: 0px;
+    font-style: SemiBold;
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 100px;
+    letter-spacing: 0px;
 }
 
-.hero-episodes-wrapper{
+.hero-episodes-wrapper {
     @extend .hero-wrapper;
     justify-content: space-between;
 }
 
-.main-input-name{
+.main-input-name {
     color: $backgroundColor;
     box-sizing: border-box;
-border: 1.5px solid rgba(17, 17, 17, 1);
-border-radius: 100px;
-background: rgba(218, 248, 54, 1);
-padding: 16px 24px 16px 24px;
+    border: 1.5px solid rgba(17, 17, 17, 1);
+    border-radius: 100px;
+    background: rgba(218, 248, 54, 1);
+    padding: 16px 24px 16px 24px;
 }
 
-.inputs-wrapper{
+.inputs-wrapper {
     display: flex;
     gap: 16px;
     justify-content: center;
     margin-top: 95px;
 }
 
-.main-input-season{
+.main-input-season {
     box-sizing: border-box;
     padding: 16px 24px 16px 24px;
-border: 1.5px solid rgba(17, 17, 17, 1);
-border-radius: 100px;
+    border: 1.5px solid rgba(17, 17, 17, 1);
+    border-radius: 100px;
 }
 
-.load-more-btn{
-padding: 12px 24px 12px 24px;
-border-radius: 1000px;
-background: rgba(161, 215, 55, 1);
-color: $backgroundColor;
-border: none;
-display: flex;
-justify-content: center!important;
-margin: 0 auto;
-margin-bottom: 128px;
-margin-top: 64px;
+.load-more-btn {
+    padding: 12px 24px 12px 24px;
+    border-radius: 1000px;
+    background: rgba(161, 215, 55, 1);
+    color: $backgroundColor;
+    border: none;
+    display: flex;
+    justify-content: center !important;
+    margin: 0 auto;
+    margin-bottom: 128px;
+    margin-top: 64px;
 }
 
-.episodes-list{
+.episodes-list {
     display: flex;
     list-style: none;
     gap: 16px;
     flex-wrap: wrap;
 }
 
-.card-episodes{
+.card-episodes {
     width: 1184px;
-height: 200px;
-border: 1px #A1D737;
-border-radius: 10px;
-background-image: url("../../kirillimg/epiback.png");
-background-repeat: no-repeat;
+    height: 200px;
+    border: 1px #A1D737;
+    border-radius: 10px;
+    background-image: url("../../kirillimg/epiback.png");
+    background-repeat: no-repeat;
 }
 
-.card-epi-title{
+.card-epi-title {
     color: rgba(161, 215, 55, 1);
-font-family: Montserrat;
-font-style: SemiBold;
-font-size: 16px;
-font-weight: 600;
-line-height: 18px;
-letter-spacing: 0%;
+    font-family: Montserrat;
+    font-style: SemiBold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0%;
 }
 
-.card-epi-wrapper{
+.card-epi-wrapper {
     display: flex;
-gap: 10px;
+    gap: 10px;
 }
