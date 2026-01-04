@@ -117,6 +117,12 @@ ul {
     flex-wrap: wrap;
   }
 }
+@media (min-width: 1200px) {
+  .main-pictures {
+    width: 365px;
+    height: 579px;
+  }
+}
 .header-my-home {
   display: flex;
   align-items: center;
@@ -191,6 +197,7 @@ ul {
   border-radius: 100px;
   background: rgb(161, 215, 55);
   overflow: hidden;
+  filter: drop-shadow(6px 6px 20px rgb(161, 215, 55));
 }
 
 .hero-title {
@@ -248,10 +255,11 @@ ul {
   list-style: none;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-episodes {
-  width: 1184px;
+  width: 284px;
   height: 200px;
   border: 1px #A1D737;
   border-radius: 10px;
