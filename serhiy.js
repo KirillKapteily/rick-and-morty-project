@@ -1,3 +1,8 @@
+document.querySelector('.search-btn').addEventListener('click', () => {
+    const value = document.getElementById('search-input').value;
+    console.log('Search:', value);
+});
+
 let nextPage = 2;
 
 document.getElementById("load-more-btn").addEventListener("click", async () => {
@@ -22,4 +27,21 @@ document.getElementById("load-more-btn").addEventListener("click", async () => {
     }
 
     nextPage++;
+});
+const input = document.getElementById('search-input');
+const searchBtn = document.querySelector('.search-btn');
+
+searchBtn.addEventListener('click', () => {
+  const value = input.value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const name = card.dataset.name;
+
+    if (name.includes(value)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
 });

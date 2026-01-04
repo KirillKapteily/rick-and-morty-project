@@ -43,22 +43,59 @@ ul {
     height: auto;
 }
 
-.img-zindex {
+/* .img-zindex {
     z-index: 2;
     position: relative;
     top: 5px;
     left: 100px;
 
-}
+} */
 
-.search-header {
+.search-box {
+    position: relative;
+    width: 320px;
+    left: 150px;
+  }
+  
+  .search-input {
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: transparent;
+    color: white;
+    padding-left: 60px; /* місце для лупи */
+    font-size: 17px;
+    outline: none;
+  }
+  
+  .search-input::placeholder {
+    color: rgba(255,255,255,0.7);
+  }
+  
+  .search-btn {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+/* .search-header {
     width: 124px;
     height: 42px;
     border-radius: 30px;
     background-color: unset;
     outline: 1px solid white;
     padding: 12px;
-}
+} */
 
 .section-hea {
     z-index: 1;
