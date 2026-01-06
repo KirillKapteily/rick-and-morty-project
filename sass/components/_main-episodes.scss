@@ -17,11 +17,11 @@
     border-radius: 100px;
     background: rgba(161, 215, 55, 1);
     overflow: hidden;
-    filter: drop-shadow(6px 6px 20px  rgba(161, 215, 55, 1));
+    filter: drop-shadow(6px 6px 20px rgba(161, 215, 55, 1));
 }
 
-.hero{
-background: linear-gradient(180.00deg, rgba(20, 24, 44, 1) 36%,rgba(52, 56, 127, 0) 100%);
+.hero {
+    background: linear-gradient(180.00deg, rgba(20, 24, 44, 1) 36%, rgba(52, 56, 127, 0) 100%);
 }
 
 .hero-title {
@@ -84,8 +84,8 @@ background: linear-gradient(180.00deg, rgba(20, 24, 44, 1) 36%,rgba(52, 56, 127,
 }
 
 .card-episodes {
-  width: 284px;
-height: 200px;
+    width: 284px;
+    height: 200px;
     border: 1px #A1D737;
     border-radius: 10px;
     background-image: url("../../kirillimg/epiback.png");

@@ -2,6 +2,7 @@
 const episodesList = document.querySelector(".episodes-list");
 const loadMoreBtn = document.querySelector(".load-more-btn");
 const mainInputName = document.querySelector(".main-input-name");
+const mainInputSeason = document.querySelector(".main-input-season")
 const headerSearch = document.querySelector(".header-search");
 
 loadMoreBtn.disabled = false;
@@ -22,10 +23,6 @@ async function loadData() {
 }
 
 async function fetchPosts() {
-    // const params = new URLSearchParams({
-    //     _limit: perPage,
-    //     _page: page
-    // });
     if (page === 3) {
         loadMoreBtn.style.background = " rgba(208, 208, 208, 1)";
         loadMoreBtn.disabled = "true"
@@ -41,35 +38,53 @@ async function fetchPosts() {
     }))
 }
 
-async function searchEps() {
+async function searchEps() { // I wispered at the cave, should've exposed you anyway
     try {
         let searched = await mainInputName.value.toLowerCase();
         const cards = await fetchPosts();
-        // let parsedText = await JSON.parse(cards)
         console.log(cards);
         const filtered = cards.filter(episode =>
             episode.title.toLowerCase().includes(searched)
         );
 
-if (searched !== filtered) {
-    episodesList.innerHTML = "<li></li>";
-} else{
-                renderPosts(filtered)
-}
+        if (searched !== filtered) {
+            episodesList.innerHTML = "<li></li>";
+        } else {
+            renderPosts(filtered)
+        }
 
         renderPosts(filtered)
-
-//  return filtered.results.map(epis => ({
-//         title: epis.name,
-//         season: epis.episode,
-//         airDate: epis.air_date
-//     }))
-        // page += 1;
 
     } catch (err) {
         console.log(err);
     }
 }
+
+async function seasonEps() { // n
+    try {
+        let searched = mainInputSeason.value;
+        const cards = await fetchPosts();
+        console.log(cards);
+        const filtered = cards.filter(episode =>
+            episode.season.toString().startsWith(searched)
+        );
+
+        if (filtered.length === 0) {
+            episodesList.innerHTML = "<li></li>";
+        } else {
+            renderPosts(filtered)
+        }
+
+        renderPosts(filtered)
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+//  filtered = filtered.filter(ep =>
+//             ep.episode.startsWith(seasonSelect.value)
+//         );
 
 async function searchEpsHeader() {
     try {
@@ -80,21 +95,12 @@ async function searchEpsHeader() {
             episode.title.toLowerCase().includes(searched)
         );
 
-if (searched !== filtered) {
-    episodesList.innerHTML = "<li></li>";
-} else{
-                renderPosts(filtered)
-}
-
+        if (searched !== filtered) {
+            episodesList.innerHTML = "<li></li>";
+        } else {
+            renderPosts(filtered)
+        }
         renderPosts(filtered)
-
-//  return filtered.results.map(epis => ({
-//         title: epis.name,
-//         season: epis.episode,
-//         airDate: epis.air_date
-//     }))
-        // page += 1;
-
     } catch (err) {
         console.log(err);
     }
@@ -121,3 +127,4 @@ function renderPosts(posts) {
 loadMoreBtn.addEventListener("click", loadData);
 mainInputName.addEventListener("input", searchEps);
 headerSearch.addEventListener("input", searchEpsHeader);
+mainInputSeason.addEventListener("input", seasonEps)
