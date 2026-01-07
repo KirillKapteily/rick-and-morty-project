@@ -16,6 +16,7 @@ async function loadData() {
         renderPosts(cards);
 
         page += 1;
+        console.log(cards);
 
     } catch (err) {
         console.log(err);
@@ -38,10 +39,31 @@ async function fetchPosts() {
     }))
 }
 
-async function searchEps() { // I wispered at the cave, should've exposed you anyway
+async function fetchAllEps() {
+    let allEpis = [];
+    let gettin = "https://rickandmortyapi.com/api/episode";
+
+    while (gettin) {
+        const resp = await fetch(gettin);
+        const data = await resp.json();
+
+        allEpis = [...allEpis, ...data.results];
+
+        gettin = data.info.next;
+    }
+
+    return allEpis.map(epis => ({
+        title: epis.name,
+        season: epis.episode,
+        airDate: epis.air_date
+    }))
+}
+
+async function searchEps() {
     try {
+        episodesList.innerHTML = " ";
         let searched = await mainInputName.value.toLowerCase();
-        const cards = await fetchPosts();
+        const cards = await fetchAllEps();
         console.log(cards);
         const filtered = cards.filter(episode =>
             episode.title.toLowerCase().includes(searched)
@@ -60,20 +82,15 @@ async function searchEps() { // I wispered at the cave, should've exposed you an
     }
 }
 
-async function seasonEps() { // n
+async function seasonEps() {
     try {
         let searched = mainInputSeason.value;
-        const cards = await fetchPosts();
-        console.log(cards);
+        const cards = await fetchAllEps();
+        // console.log(cards);
         const filtered = cards.filter(episode =>
             episode.season.toString().startsWith(searched)
         );
-
-        if (filtered.length === 0) {
-            episodesList.innerHTML = "<li></li>";
-        } else {
-            renderPosts(filtered)
-        }
+console.log(filtered);
 
         renderPosts(filtered)
 
@@ -81,10 +98,6 @@ async function seasonEps() { // n
         console.log(err);
     }
 }
-
-//  filtered = filtered.filter(ep =>
-//             ep.episode.startsWith(seasonSelect.value)
-//         );
 
 async function searchEpsHeader() {
     try {
@@ -123,7 +136,8 @@ function renderPosts(posts) {
     episodesList.insertAdjacentHTML("beforeend", markup);
 }
 
-
+loadData();
+// fetchAllEps();
 loadMoreBtn.addEventListener("click", loadData);
 mainInputName.addEventListener("input", searchEps);
 headerSearch.addEventListener("input", searchEpsHeader);
