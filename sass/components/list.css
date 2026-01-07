@@ -43,22 +43,60 @@ ul {
     height: auto;
 }
 
-.img-zindex {
+/* .img-zindex {
     z-index: 2;
     position: relative;
     top: 5px;
     left: 100px;
 
+} */
+
+.search-box {
+    position: relative;
+    width: 320px;
+    left: 150px;
 }
 
-.search-header {
+.search-input {
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: white;
+    padding-left: 60px;
+    /* місце для лупи */
+    font-size: 17px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-btn {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* .search-header {
     width: 124px;
     height: 42px;
     border-radius: 30px;
     background-color: unset;
     outline: 1px solid white;
     padding: 12px;
-}
+} */
 
 .section-hea {
     z-index: 1;
@@ -259,4 +297,10 @@ select option {
     width: 240px;
     height: 300px;
     border-radius: 15px;
+}
+
+.card.highlight {
+    outline: 3px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+    transition: 0.3s;
 }

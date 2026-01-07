@@ -23,3 +23,32 @@ document.getElementById("load-more-btn").addEventListener("click", async () => {
 
     nextPage++;
 });
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.querySelector('.search-btn');
+const cardsContainer = document.getElementById('items-container');
+
+searchBtn.addEventListener('click', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.card');
+
+    if (!query) return;
+
+    cardsContainer.scrollIntoView({ behavior: 'smooth' });
+
+    let found = false;
+
+    cards.forEach(card => {
+        const name = card.querySelector('.card-name')
+            .textContent.toLowerCase();
+
+        if (name.includes(query)) {
+            card.style.display = 'block';
+            if (!found) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                found = true;
+            }
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
