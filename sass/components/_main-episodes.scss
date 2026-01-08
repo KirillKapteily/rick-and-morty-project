@@ -86,8 +86,9 @@
 .card-episodes {
     width: 284px;
     height: 200px;
-    border: 1px #A1D737;
+border: 2px solid rgba(161, 215, 55, 1);
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.782);
     background-image: url("../../kirillimg/epiback.png");
     background-repeat: no-repeat;
 }
@@ -100,9 +101,14 @@
     font-weight: 600;
     line-height: 18px;
     letter-spacing: 0%;
+    margin-bottom: 90px;
 }
 
 .card-epi-wrapper {
     display: flex;
     gap: 10px;
 }
+
+ .card-epi-p{
+    color: white;
+ }
