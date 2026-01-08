@@ -125,9 +125,9 @@ function renderPosts(posts) {
             return `<li class="card-episodes">
          <p class="card-epi-title"><strong>${title}</strong></p>
          <div class="card-epi-wrapper">
-          <p>season <br>
+          <p class="card-epi-p">season <br>
        ${season}</p>
- <p>Air date <br>
+ <p class="card-epi-p">Air date <br>
         ${airDate}</p>
          </div>
         </li>`;
