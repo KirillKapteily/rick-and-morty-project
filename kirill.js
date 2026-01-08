@@ -90,7 +90,8 @@ async function seasonEps() {
         const filtered = cards.filter(episode =>
             episode.season.toString().startsWith(searched)
         );
-console.log(filtered);
+           episodesList.innerHTML = " ";
+        console.log(filtered);
 
         renderPosts(filtered)
 
