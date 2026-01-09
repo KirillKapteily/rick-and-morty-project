@@ -4,11 +4,15 @@ const loadMoreBtn = document.querySelector(".load-more-btn");
 const mainInputName = document.querySelector(".main-input-name");
 const mainInputSeason = document.querySelector(".main-input-season")
 const headerSearch = document.querySelector(".header-search");
+const modalEpisodes = document.querySelector(".modal-episodes");
+const backdrop = document.querySelector(".backdrop");
 
 loadMoreBtn.disabled = false;
 
 let page = 1;
 let perPage = 10;
+
+let episodeId = 1;
 
 async function loadData() {
     try {
@@ -33,6 +37,7 @@ async function fetchPosts() {
     const response = await fetch(`https://rickandmortyapi.com/api/episode?page=${page}`);
     const data = await response.json();
     return data.results.map(epis => ({
+        id: epis.id,
         title: epis.name,
         season: epis.episode,
         airDate: epis.air_date
@@ -53,10 +58,36 @@ async function fetchAllEps() {
     }
 
     return allEpis.map(epis => ({
+         id: epis.id,
         title: epis.name,
         season: epis.episode,
-        airDate: epis.air_date
+        airDate: epis.air_date,
+        charecters: epis.characters
     }))
+}
+
+async function fetchAllChars(episodeId) {
+    let resp = await fetch(`https://rickandmortyapi.com/api/episode/${episodeId}`);
+    let episode = await resp.json();
+
+    const allCharacters = await Promise.all(
+        episode.characters.map(url => fetch(url))
+    );
+
+    const charactersData = await Promise.all(
+        allCharacters.map(res => res.json())
+    );
+
+    return [{
+        title: episode.name,
+        id: episode.id,
+        airDate: episode.air_date,
+        episode: episode.episode,
+        characters: charactersData.map(char => ({
+            name: char.name,
+            img: char.image
+        }))
+    }];
 }
 
 async function searchEps() {
@@ -90,10 +121,27 @@ async function seasonEps() {
         const filtered = cards.filter(episode =>
             episode.season.toString().startsWith(searched)
         );
-           episodesList.innerHTML = " ";
+        episodesList.innerHTML = " ";
         console.log(filtered);
 
         renderPosts(filtered)
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+async function openEpsModal(event) {
+    try {
+        selectedCard = event.target.closest("li");
+        const episodeId = selectedCard.dataset.episodeId;
+        console.log(selectedCard);
+        const cards = await fetchAllChars(episodeId);
+
+
+        console.log(cards);
+
+        renderModal(cards)
 
     } catch (err) {
         console.log(err);
@@ -120,10 +168,10 @@ async function searchEpsHeader() {
     }
 }
 
-function renderPosts(posts) {
-    const markup = posts
-        .map(({ title, season, airDate }) => {
-            return `<li class="card-episodes">
+function renderPosts(episodes) {
+    const markup = episodes
+        .map(({ title, season, airDate, id }) => {
+            return `<li class="card-episodes"  data-episode-id="${id}">
          <p class="card-epi-title"><strong>${title}</strong></p>
          <div class="card-epi-wrapper">
           <p class="card-epi-p">season <br>
@@ -137,9 +185,51 @@ function renderPosts(posts) {
     episodesList.insertAdjacentHTML("beforeend", markup);
 }
 
+function renderModal(eps) {
+    const markup = eps
+        .map(({ title, id, airDate, characters }) => {
+            const charactersMarkup = characters
+                .map(({ name, img }) => `
+                    <li class="modal-episodes-item">
+                        <img src="${img}" alt="${name}" width="60">
+                        <p class="modal-episodes-p">${name}</p>
+                    </li>
+ `).join("");
+
+  return `<button type="button" class="close-modal">X</button>
+                <h3 class="modal-episodes-title">${title}</h3>
+                <div class="modal-wrapper">
+                    <p class="modal-episodes-id">Id <br> ${id}</p>
+                    <p class="modal-episodes-airdate">Air Date <br> ${airDate}</p>
+                </div>
+                <h3 class="modal-episodes-title">Characters</h3>
+                <p class="modal-episodes-char-p">Major Characters</p>
+                <ul class="modal-episodes-list">
+                    ${charactersMarkup}
+                </ul>
+            `;
+        }).join("");
+
+    modalEpisodes.innerHTML = markup;
+    modalEpisodes.style.display = "block";
+    backdrop.style.display = "block";
+}
+
+function closeModal(event) {
+    if (event.target.nodeName !== "BUTTON") {
+        return
+    } else {
+          modalEpisodes.style.display = "none";
+              backdrop.style.display = "none";
+    }
+
+}
+
 loadData();
 // fetchAllEps();
 loadMoreBtn.addEventListener("click", loadData);
 mainInputName.addEventListener("input", searchEps);
 headerSearch.addEventListener("input", searchEpsHeader);
-mainInputSeason.addEventListener("input", seasonEps)
+mainInputSeason.addEventListener("input", seasonEps);
+episodesList.addEventListener("click", openEpsModal)
+modalEpisodes.addEventListener("click", closeModal)

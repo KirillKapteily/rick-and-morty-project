@@ -12,24 +12,24 @@
     <link rel="stylesheet" href="./sass/main.css">
 </head>
 
-<body> 
+<body>
     <header class="header-my-home">
-    <div class="container">
-        <div class="header-wrapper">
-            <div>
-                <a href="index.html"> <img src="./kirillimg/mainlogo.webp" alt="logo" width="135"></a>
-            </div>
+        <div class="container">
+            <div class="header-wrapper">
+                <div>
+                    <a href="index.html"> <img src="./kirillimg/mainlogo.webp" alt="logo" width="135"></a>
+                </div>
 
-            <div class="search-wrapper">
+                <div class="search-wrapper">
                     <svg class="search-ico">
                         <use href="./kirillimg/symbol-defs.svg#icon-search" width="18" height="18"></use>
                     </svg>
                     <input type="text" placeholder="Search" class="header-search">
                 </div>
-            </header>
-        </div>
-</div>
-    
+    </header>
+    </div>
+    </div>
+
     <main>
         <section class="hero-episodes">
             <div class="container">
@@ -43,7 +43,8 @@
                             provoking, our
                             episode
                             guide covers it all.</p>
-                        <button type="button" class="hero-btn" onclick="window.location.href='index.html';">Back home</button>
+                        <button type="button" class="hero-btn" onclick="window.location.href='index.html';">Back
+                            home</button>
                     </div>
 
 
@@ -68,27 +69,27 @@
                     <p class="main-input-paragraph">Episode code</p>
                     <!-- <input placeholder="All season" class="main-input-season"> -->
                     <div class="filter">
-                    <select id="seasonSelect" class="main-input-season">
-                        <option value="">All season</option>
-                        <option value="S01">1 season</option>
-                        <option value="S02">2 season</option>
-                        <option value="S03">3 season</option>
-                        <option value="S04">4 season</option>
-                        <option value="S05">5 season</option>
-                        
-                    </select>
-                </div>
+                        <select id="seasonSelect" class="main-input-season">
+                            <option value="">All season</option>
+                            <option value="S01">1 season</option>
+                            <option value="S02">2 season</option>
+                            <option value="S03">3 season</option>
+                            <option value="S04">4 season</option>
+                            <option value="S05">5 season</option>
+
+                        </select>
+                    </div>
                 </div>
             </div>
-<div id="pagination"></div>
+            <div id="pagination"></div>
 
             <div id="articles">result (placeholder)</div>
 
-<ul class="episodes-list">
+            <ul class="episodes-list">
 
-</ul>
+            </ul>
 
-            <button type="button" class="load-more-btn"  id="butt">Load more</button>
+            <button type="button" class="load-more-btn" id="butt">Load more</button>
         </section>
     </main>
     <footer>
@@ -125,12 +126,13 @@
                 </div>
             </div>
             <div>
+
+      <div class="backdrop"> <div class="modal-episodes"></div></div>        
                 <p class="privacy">Privacy Policy Public Offering Agreement</p>
             </div>
-        </div>
 
     </footer>
-     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
     <script src="kirill.js"></script>
 </body>
 
