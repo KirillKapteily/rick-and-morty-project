@@ -1,16 +1,21 @@
 .social-ico {
-    width: 12px;
-    height: 24px;
+    width: 56px;
+    height: 56px;
 }
 
 .social-ico2 {
-    width: 28px;
-    height: 28px;
+    width: 56px;
+    height: 56px;
 }
 
 .social-ico3 {
-    width: 26.13px;
-    height: 26.13px;
+       width: 56px;
+    height: 56px;
+}
+
+.footer-nav-link-e{
+    color: $white;
+    text-decoration: none;
 }
 
 .footer-nav-link {
@@ -23,6 +28,7 @@
 }
 
 .footer-contacts-list {
+    
     display: flex;
     list-style: none;
     gap:32px;
@@ -32,11 +38,19 @@
     margin-bottom: 16px;
 }
 
-.footer-contacts-item{
-box-sizing: border-box;
-border: 1px solid rgba(17, 17, 17, 1);
-border-radius: 12px;
-padding: 16px 16px 16px 16px;
+// .footer-contacts-item{
+// box-sizing: border-box;
+// border: 1px solid rgba(17, 17, 17, 1);
+// border-radius: 12px;
+// padding: 16px 16px 16px 16px;
+// }
+
+.footer-h{
+        margin-top: 90px;
+}
+.footer-e{
+    background-color: $footerBlack;
+        padding-top: 90px;
 }
 
 .footer-wrapper {

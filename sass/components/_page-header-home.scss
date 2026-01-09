@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     background-color: $backgroundColor;
+    padding-top: 24px;
 //     background: linear-gradient(180.00deg, rgba(20, 24, 44, 1) 36%,rgba(52, 56, 127, 0) 100%);
 }
 
@@ -11,6 +12,7 @@
 }
 
 .search-wrapper {
+    height: 23px;
     display: flex;
     padding: 12px 24px 12px 24px;
     border: 1px solid rgba(250, 250, 250, 0.3);
@@ -18,14 +20,21 @@
 }
 
 .header-search {
-    color: white;
+    color: white!important;
     background-color: $backgroundColor;
     border: none;
+    width: 45px;
 }
 
 .search-ico {
     width: 18px;
     height: 18px;
+    margin-right: 10px;
+}
+
+.position-corrector{
+    position: relative;
+    top: 2px;
 }
 
 .header-list {

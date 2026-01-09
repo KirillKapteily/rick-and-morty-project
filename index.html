@@ -21,7 +21,7 @@
                     <li class="header-item"><a href="episodes.html" class="header-link not-accent">Episodes</a></li>
                 </ul>
                 <div class="search-wrapper">
-                    <svg class="search-ico">
+                    <svg class="search-ico position-corrector">
                         <use href="./kirillimg/symbol-defs.svg#icon-search" width="18" height="18"></use>
                     </svg>
                     <input type="text" placeholder="Search" class="header-search">
@@ -48,17 +48,19 @@
                         </ul>
                     </div>
                 </div>
-
-                <button type="button" class="down-btn"><svg class="down-ico">
+<div class="btn-wrapper">
+  <button type="button" class="down-btn" onclick="window.location.href='#main-sect-h';"><svg class="down-ico"> <!-- main-sect-h -->
                         <use href="./kirillimg/symbol-defs.svg#icon-down" width="40" height="40"></use>
                     </svg></button>
+</div>
+              
             </div>
 
         </section>
         <section>
             <img src="./kirillimg/Tags.svg" alt="d" class="tags">
         </section>
-        <section class="main-char-home-sect">
+        <section class="main-char-home-sect" id="main-sect-h">
             <div class="container">
                 <h3 class="main-title"><span class="main-span">Main</span> characters</h3>
                 <div class="whole-char-wrapper">
@@ -169,13 +171,13 @@
 
 
     </main>
-    <footer>
+    <footer class="footer-h">
         <div class="container">
             <div class="footer-wrapper">
                 <div class="logo-footer-wrapper">
-                    <img src="./kirillimg/logofooter.svg" alt="logo" class="footer-logo-piece-1">
-                    <img src="./kirillimg/pills.svg" alt="pills" class="footer-logo-piece-2">
+                <a href="index.html"><img src="./kirillimg/rnmlogoli.svg" alt="logo"></a>  
                 </div>
+            
                 <div class="footer-nav-list">
                     <ul class="footer-nav-list">
                         <li class="footer-nav-item"><a href="characters.html" class="footer-nav-link">Characters</a></li>
@@ -187,15 +189,15 @@
                     <ul class="footer-contacts-list">
                         <li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg
                                     class="social-ico">
-                                    <use href="./kirillimg/symbol-defs.svg#icon-facebook" width="12" height="24"></use>
+                                    <use href="./kirillimg/symbol-defs-social.svg#icon-facebooklight" width="56" height="56"></use>
                                 </svg></a></li>
                         <li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg
                                     class="social-ico2">
-                                    <use href="./kirillimg/symbol-defs.svg#icon-twitter" width="28" height="28"></use>
+                                    <use href="./kirillimg/symbol-defs-social.svg#icon-twitterlight" width="56" height="56"></use>
                                 </svg></a></a></li>
                         <li class="footer-contacts-item"><a href="#" class="footer-contacts-link"><svg
                                     class="social-ico3">
-                                    <use href="./kirillimg/symbol-defs.svg#icon-insta" width="26.13" height="26.13">
+                                    <use href="./kirillimg/symbol-defs-social.svg#icon-instlight" width="56" height="56">
                                     </use>
                                 </svg></a></a></li>
                     </ul>
