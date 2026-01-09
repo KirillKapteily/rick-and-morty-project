@@ -172,10 +172,10 @@ function renderPosts(episodes) {
     const markup = episodes
         .map(({ title, season, airDate, id }) => {
             return `<li class="card-episodes"  data-episode-id="${id}">
-         <p class="card-epi-title"><strong>${title}</strong></p>
+         <p class="card-epi-title">${title}</p>
          <div class="card-epi-wrapper">
           <p class="card-epi-p">season <br>
-       ${season}</p>
+       ${season.slice(2,3)}</p>
  <p class="card-epi-p">Air date <br>
         ${airDate}</p>
          </div>

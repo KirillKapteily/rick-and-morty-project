@@ -16,6 +16,7 @@
 
     .hero-text {
         order: 3;
+        width: 300px;
     }
 
 .logo-wrapper{
@@ -48,6 +49,16 @@
     .footer-logo-piece-1{
        position: relative;
     top: 109px!important;
+}
+
+.hero-title{
+    font-size: 60px!important;
+}
+
+.imgs-hero-ep{
+    width: 346px;
+height: 346px;
+border-radius: 50px;
 }
 
     .footer-logo-piece-2{
@@ -138,6 +149,12 @@ height: 36px;
 .footer-wrapper{
     flex-wrap: wrap;
 }
+
+  .main-images-title {
+font-size: 28px!important;
+font-weight: 600;
+line-height: 32px;
+    }
 
 }
 
