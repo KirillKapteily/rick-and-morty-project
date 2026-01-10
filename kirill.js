@@ -196,8 +196,10 @@ function renderModal(eps) {
                     </li>
  `).join("");
 
-  return `<button type="button" class="close-modal">X</button>
-                <h3 class="modal-episodes-title">${title}</h3>
+  return `
+  <div class="modal-wrapper2">
+  <button type="button" class="close-modal"><svg class="close-ico"><use href="./kirillimg/symbol-defs-xbtn.svg#icon-x" width="22" height="22"></use></svg></button>
+   <h3 class="modal-episodes-title">${title}</h3>
                 <div class="modal-wrapper">
                     <p class="modal-episodes-id">Id <br> ${id}</p>
                     <p class="modal-episodes-airdate">Air Date <br> ${airDate}</p>
@@ -207,18 +209,23 @@ function renderModal(eps) {
                 <ul class="modal-episodes-list">
                     ${charactersMarkup}
                 </ul>
+  </div>
+               
             `;
         }).join("");
 
     modalEpisodes.innerHTML = markup;
     modalEpisodes.style.display = "block";
     backdrop.style.display = "block";
-}
+    }
 
 function closeModal(event) {
-    if (event.target.nodeName !== "BUTTON") {
+    const closeBtn = event.target.closest(".close-modal");
+    if (!closeBtn) {
         return
     } else {
+        console.log(event.target.nodeName);
+        
           modalEpisodes.style.display = "none";
               backdrop.style.display = "none";
     }
