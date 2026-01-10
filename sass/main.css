@@ -130,6 +130,13 @@ ul {
     font-weight: 600;
     line-height: 32px;
   }
+  .modal-episodes {
+    width: 335px !important;
+    height: 470px !important;
+  }
+  .modal-episodes-list {
+    height: 228px !important;
+  }
 }
 @media (min-width: 1200px) {
   .main-pictures {
@@ -183,11 +190,19 @@ ul {
 
 .accent {
   background: rgb(161, 215, 55);
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.accent:hover {
+  background-color: rgba(156, 201, 66, 0.836);
 }
 
 .not-accent {
   color: white !important;
   border: 1px solid rgba(250, 250, 250, 0.3);
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.not-accent:hover {
+  background-color: rgba(240, 248, 255, 0.156);
 }
 
 .header-link {
@@ -214,6 +229,10 @@ ul {
   background-color: rgba(240, 248, 255, 0);
   padding: 12px 24px 12px 24px;
   margin-top: 32px;
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.hero-btn:hover {
+  background-color: rgba(240, 248, 255, 0.156);
 }
 
 .imgs-hero-ep {
@@ -254,6 +273,7 @@ ul {
   display: flex;
   gap: 16px;
   justify-content: center;
+  margin: 0 auto;
   margin-top: 95px;
 }
 
@@ -322,8 +342,8 @@ ul {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   top: 50%;
   left: 50%;
-  width: 100%;
-  max-height: 100%;
+  width: 673px;
+  height: 370px;
   border-radius: 18px;
   background: rgb(13, 23, 29);
   padding: 32px 32px 32px 32px;
@@ -344,9 +364,13 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.073);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .modal-episodes-title {
@@ -412,6 +436,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  height: 64px;
+  overflow-y: auto;
   list-style: none;
 }
 
@@ -454,8 +480,9 @@ img {
   border: none;
   padding: 12px 24px 12px 24px;
   background: rgb(161, 215, 55);
-  justify-content: flex-end;
   align-items: flex-end;
+  justify-content: end !important;
+  justify-self: end;
 }
 
 .images-explore {
@@ -556,13 +583,18 @@ img {
 }
 
 .down-btn {
-  background-color: rgba(250, 128, 114, 0);
+  background-color: rgb(13, 23, 29);
   border-radius: 100px;
   padding: 20px 20px 20px 20px;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: end !important;
+  justify-self: end;
   border: 1px solid rgba(250, 250, 250, 0.5);
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.down-btn:hover {
+  background-color: rgba(240, 248, 255, 0.156);
 }
 
 .btn-wrapper {
