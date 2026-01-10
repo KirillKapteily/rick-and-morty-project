@@ -37,8 +37,9 @@ img{
     border: none;
     padding: 12px 24px 12px 24px;
     background: rgba(161, 215, 55, 1);
-    justify-content: flex-end;
     align-items: flex-end;
+      justify-content: end!important;
+    justify-self: end;
 }
 
 .images-explore {
@@ -142,14 +143,19 @@ img{
 }
 
 .down-btn {
-    background-color: rgba(250, 128, 114, 0);
+    background-color: $backgroundColor;
     border-radius: 100px;
     padding: 20px 20px 20px 20px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: end!important;
+    justify-self: end;
     border: 1px solid rgba(250, 250, 250, 0.5);
+     transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
+    &:hover{
+        background-color: rgba(240, 248, 255, 0.156);
+    }
 }
 
 .btn-wrapper{
