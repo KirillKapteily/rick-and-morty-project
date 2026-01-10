@@ -132,10 +132,10 @@ ul {
   }
   .modal-episodes {
     width: 335px !important;
-    height: 470px !important;
+    height: 570px !important;
   }
   .modal-episodes-list {
-    height: 228px !important;
+    height: 178px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -343,11 +343,10 @@ ul {
   top: 50%;
   left: 50%;
   width: 673px;
-  height: 370px;
+  height: auto;
   border-radius: 18px;
   background: rgb(13, 23, 29);
   padding: 32px 32px 32px 32px;
-  border: 2px solid rgb(161, 215, 55);
   border-radius: 18px;
   background: rgb(13, 23, 29);
 }
@@ -438,7 +437,27 @@ ul {
   gap: 32px;
   height: 64px;
   overflow-y: auto;
+  padding-left: 0 !important;
   list-style: none;
+}
+
+.modal-wrapper2 {
+  border: 2px solid rgb(161, 215, 55);
+  border-radius: 18px;
+  padding: 32px 32px 32px 32px;
+}
+
+.close-ico {
+  width: 22px;
+  height: 22px;
+}
+
+.close-modal {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: end !important;
+  justify-self: end;
 }
 
 .hero, .hero-episodes {

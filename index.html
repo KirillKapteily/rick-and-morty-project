@@ -42,10 +42,18 @@
                     <!-- <img src="./kirillimg/herodecor.svg" alt="kod"> -->
                     <div class="logo-wrapper">
                         <ul class="main-list">
-                            <li class="main-item"><img src="./kirillimg/image.svg" alt="ilustration" class="main-img"
-                                    width="532"></li>
-                            <li class="main-item"><img src="./kirillimg/mainlogo.webp" alt="logo" class="main-img"
-                                    width="462"></li>
+                            <li class="main-item">
+                               <picture class="hero-img">
+                        <source srcset="./kirillimg/imagehero@1x.webp" media="(min-width: 320px) and (max-width:620px)">
+                        <source srcset="./kirillimg/imagehero@2x.webp" media="(min-width: 621px) and (max-width:1200px)">
+                        <source srcset="./kirillimg/imagehero@3x.webp" media="(min-width: 1201px)">
+                        <img src="./kirillimg/imagehero@3x.webp" alt="2" class="main-img" width="532">
+                    </picture>
+                                <!-- <img src="./kirillimg/imagehero@1x.webp" alt="ilustration" class="main-img" width="532"> -->
+                            </li>
+                            <li class="main-item">
+                                <img src="./kirillimg/mainlogo.webp" alt="logo" class="main-img" width="462">
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -69,12 +77,10 @@
                     <div class="main-charecters-title-wrapper">
                         <div class="background-char">
                             <picture class="main-pictures">
-                                <source srcset="./kirillimg/charmainpic/rick@1x.webp"
-                                    media="(min-width: 320px) and (max-width:620px)">
-                                <source srcset="./kirillimg/./kirillimg/charmainpic/rick@2x.webp"
-                                    media="(min-width: 621px) and (max-width:1200px)">
+                                <source srcset="./kirillimg/charmainpic/rick@1x.webp" media="(min-width: 320px) and (max-width:620px)">
+                                <source srcset="./kirillimg/./kirillimg/charmainpic/rick@2x.webp" media="(min-width: 621px) and (max-width:1200px)">
                                 <source srcset="./kirillimg/charmainpic/rick@3x.webp" media="(min-width: 1201px)">
-                                <img src="./kirillimg/charmainpic/rick@2x.webp" alt="2" class="main-img">
+                                <img src="./kirillimg/charmainpic/rick@3x.webp" alt="2" class="main-img">
                             </picture>
                             <!-- <img src="./kirillimg/charmainpic/jerrysmith@1x.png" alt="person" class="main-img"> -->
                         </div>
@@ -108,7 +114,7 @@
                                 <hr class="main-characters-hr">
                             </li>
                             <li class="main-characters-item">
-                                <h3 class="main-characters-title title-a-4"  data-char="beth">Beth Smith</h3>
+                                <h3 class="main-characters-title title-a-4" data-char="beth">Beth Smith</h3>
                                 <p class="main-characters-paragraph">Beth is a horse surgeon, and, as Rick's daughter,
                                     she is
                                     intelligent if sometimes cold. She is voiced by Sarah Chalke.</p>
@@ -226,7 +232,7 @@
 
     </footer>
     <script src="ci.js"></script>
-    <script src="kirill.js"></script>
+    <!-- <script src="kirill.js"></script> -->
 </body>
 
 </html>
