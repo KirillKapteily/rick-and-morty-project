@@ -309,9 +309,9 @@ ul {
   width: 284px;
   height: 200px;
   border: 2px solid rgb(161, 215, 55);
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.782);
-  background-image: url("../../kirillimg/epiback.png");
+  border-radius: 18px;
+  background-color: #0D171D;
+  background-image: url("../../kirillimg/episodesimgs/epiback1.png");
   background-repeat: no-repeat;
 }
 

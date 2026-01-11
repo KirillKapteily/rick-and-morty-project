@@ -9,6 +9,27 @@ const backdrop = document.querySelector(".backdrop");
 
 loadMoreBtn.disabled = false;
 
+const backgrounds = {
+    epione:{
+        bg: "epiback1"
+    },
+     epitwo:{
+        bg: "epiback2"
+    },
+     epithree:{
+        bg: "epiback3"
+    },
+     epifour:{
+        bg: "epiback4"
+    },
+     epifive:{
+        bg: "epiback5"
+    },
+     episix:{
+        bg: "epiback6"
+    }
+}
+
 let page = 1;
 let perPage = 10;
 
@@ -183,6 +204,26 @@ function renderPosts(episodes) {
         })
         .join("");
     episodesList.insertAdjacentHTML("beforeend", markup);
+
+    matchBack();
+}
+
+function matchBack() {
+    const cardEpisodes = document.querySelectorAll(".card-episodes");
+
+    const bgKeys = ["epiback1", "epiback2", "epiback3", "epiback4", "epiback5", "epiback6"];
+
+    if (cardEpisodes.length > 0 && cardEpisodes.length < 11) {
+        cardEpisodes.forEach(card => {
+            card.style.backgroundImage =
+                `url('./kirillimg/episodesimgs/${bgKeys[0]}.png')`;
+        });
+    } else if (cardEpisodes.length >= 11 && cardEpisodes.length < 21) {
+        cardEpisodes.forEach(card => {
+            card.style.backgroundImage =
+                `url('./kirillimg/episodesimgs/${bgKeys[1]}.png')`;
+        });
+    }
 }
 
 function renderModal(eps) {
@@ -234,6 +275,9 @@ function closeModal(event) {
 
 loadData();
 // fetchAllEps();
+// matchBack();
+document.addEventListener("DOMContentLoaded", matchBack)
+
 loadMoreBtn.addEventListener("click", loadData);
 mainInputName.addEventListener("input", searchEps);
 headerSearch.addEventListener("input", searchEpsHeader);
