@@ -28,10 +28,6 @@ ul {
   .logo-wrapper {
     order: 2;
   }
-  .tags {
-    max-width: 704px;
-    overflow: hidden;
-  }
   .whole-char-wrapper {
     flex-wrap: wrap;
   }
@@ -76,10 +72,6 @@ ul {
   }
   .logo-wrapper {
     order: 2;
-  }
-  .tags {
-    max-width: 335px;
-    overflow: hidden;
   }
   .hero-title {
     font-size: 40px !important;
@@ -295,6 +287,10 @@ ul {
   margin: 0 auto;
   margin-bottom: 128px;
   margin-top: 64px;
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.load-more-btn:hover {
+  background-color: rgba(156, 201, 66, 0.836);
 }
 
 .episodes-list {
@@ -329,6 +325,14 @@ ul {
 .card-epi-wrapper {
   display: flex;
   gap: 10px;
+}
+
+.si2 {
+  position: relative;
+  right: 40px;
+  top: 5px;
+  fill: none;
+  stroke: currentColor;
 }
 
 .card-epi-p {
@@ -502,6 +506,10 @@ img {
   align-items: flex-end;
   justify-content: end !important;
   justify-self: end;
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.main-images-btn:hover {
+  background-color: rgba(156, 201, 66, 0.836);
 }
 
 .images-explore {
@@ -527,6 +535,13 @@ img {
 .main-char-home-sect {
   margin-top: 145px;
   margin-bottom: 128px;
+}
+
+.main-characters-title {
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.main-characters-title:hover {
+  color: rgba(156, 201, 66, 0.836);
 }
 
 .main-images-title {
@@ -620,6 +635,21 @@ img {
   padding-bottom: 64px;
 }
 
+.tags-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tags-ico {
+  width: 1408px;
+  height: 173px;
+}
+
+.tags {
+  overflow: hidden;
+}
+
 .social-ico {
   width: 56px;
   height: 56px;
@@ -638,11 +668,19 @@ img {
 .footer-nav-link-e {
   color: rgb(250, 250, 250);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer-nav-link-e:hover {
+  color: rgba(156, 201, 66, 0.836);
 }
 
 .footer-nav-link {
   color: rgb(13, 23, 29);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer-nav-link:hover {
+  color: rgba(156, 201, 66, 0.836);
 }
 
 .footer-nav-list {
@@ -671,17 +709,6 @@ img {
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-.footer-logo-piece-1 {
-  position: relative !important;
-  left: 30px !important;
-}
-
-.footer-logo-piece-2 {
-  position: relative !important;
-  right: 100px !important;
-  top: 50px !important;
 }
 
 .privacy {

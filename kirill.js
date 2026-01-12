@@ -9,26 +9,6 @@ const backdrop = document.querySelector(".backdrop");
 
 loadMoreBtn.disabled = false;
 
-const backgrounds = {
-    epione:{
-        bg: "epiback1"
-    },
-     epitwo:{
-        bg: "epiback2"
-    },
-     epithree:{
-        bg: "epiback3"
-    },
-     epifour:{
-        bg: "epiback4"
-    },
-     epifive:{
-        bg: "epiback5"
-    },
-     episix:{
-        bg: "epiback6"
-    }
-}
 
 let page = 1;
 let perPage = 10;
@@ -79,7 +59,7 @@ async function fetchAllEps() {
     }
 
     return allEpis.map(epis => ({
-         id: epis.id,
+        id: epis.id,
         title: epis.name,
         season: epis.episode,
         airDate: epis.air_date,
@@ -196,7 +176,7 @@ function renderPosts(episodes) {
          <p class="card-epi-title">${title}</p>
          <div class="card-epi-wrapper">
           <p class="card-epi-p">season <br>
-       ${season.slice(2,3)}</p>
+       ${season.slice(2, 3)}</p>
  <p class="card-epi-p">Air date <br>
         ${airDate}</p>
          </div>
@@ -209,21 +189,28 @@ function renderPosts(episodes) {
 }
 
 function matchBack() {
+    let episodes = [];
     const cardEpisodes = document.querySelectorAll(".card-episodes");
 
-    const bgKeys = ["epiback1", "epiback2", "epiback3", "epiback4", "epiback5", "epiback6"];
+    cardEpisodes.forEach(card => {
+        let id = Number(card.dataset.episodeId);
+        episodes.push(id)
 
-    if (cardEpisodes.length > 0 && cardEpisodes.length < 11) {
-        cardEpisodes.forEach(card => {
-            card.style.backgroundImage =
-                `url('./kirillimg/episodesimgs/${bgKeys[0]}.png')`;
-        });
-    } else if (cardEpisodes.length >= 11 && cardEpisodes.length < 21) {
-        cardEpisodes.forEach(card => {
-            card.style.backgroundImage =
-                `url('./kirillimg/episodesimgs/${bgKeys[1]}.png')`;
-        });
-    }
+        let bgI = 0;
+    if (id <= 11) {
+            bgI = 1;
+        } else if (id <= 21) {
+            bgI = 2;
+        } else if (id <= 31) {
+            bgI = 3;
+        } else if (id <= 41) {
+            bgI = 4;
+        } else  {
+            bgI = 5;
+        }
+
+        card.style.backgroundImage = `url("./kirillimg/episodesimgs/epiback${bgI}.png")`
+    })
 }
 
 function renderModal(eps) {
@@ -237,7 +224,7 @@ function renderModal(eps) {
                     </li>
  `).join("");
 
-  return `
+            return `
   <div class="modal-wrapper2">
   <button type="button" class="close-modal"><svg class="close-ico"><use href="./kirillimg/symbol-defs-xbtn.svg#icon-x" width="22" height="22"></use></svg></button>
    <h3 class="modal-episodes-title">${title}</h3>
@@ -258,7 +245,7 @@ function renderModal(eps) {
     modalEpisodes.innerHTML = markup;
     modalEpisodes.style.display = "block";
     backdrop.style.display = "block";
-    }
+}
 
 function closeModal(event) {
     const closeBtn = event.target.closest(".close-modal");
@@ -266,9 +253,9 @@ function closeModal(event) {
         return
     } else {
         console.log(event.target.nodeName);
-        
-          modalEpisodes.style.display = "none";
-              backdrop.style.display = "none";
+
+        modalEpisodes.style.display = "none";
+        backdrop.style.display = "none";
     }
 
 }

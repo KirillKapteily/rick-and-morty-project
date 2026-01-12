@@ -1,8 +1,8 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <symbol id="icon-search" viewBox="0 0 32 32">
-<path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M14.667 25.333c-5.891 0-10.667-4.776-10.667-10.667s4.776-10.667 10.667-10.667c5.891 0 10.667 4.776 10.667 10.667s-4.776 10.667-10.667 10.667z"></path>
-<path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M28 28l-5.8-5.8"></path>
+<path fill="none" stroke="currentColor" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M14.667 25.333c-5.891 0-10.667-4.776-10.667-10.667s4.776-10.667 10.667-10.667c5.891 0 10.667 4.776 10.667 10.667s-4.776 10.667-10.667 10.667z"></path>
+<path fill="none" stroke="currentColor" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M28 28l-5.8-5.8"></path>
 </symbol>
 <symbol id="icon-twitter" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M24.983 7.463c-0.688-0.791-1.603-1.352-2.621-1.607s-2.089-0.191-3.068 0.183c-0.98 0.374-1.821 1.040-2.41 1.908s-0.898 1.896-0.883 2.944v1.143c-2.008 0.052-3.998-0.393-5.793-1.297s-3.338-2.236-4.493-3.88c0 0-4.571 10.286 5.714 14.857-2.354 1.598-5.158 2.399-8 2.286 10.286 5.714 22.857 0 22.857-13.143-0.001-0.318-0.032-0.636-0.091-0.949 1.166-1.15 1.989-2.603 2.377-4.194-1.094 0.772-2.306 1.362-3.589 1.749z"></path>
