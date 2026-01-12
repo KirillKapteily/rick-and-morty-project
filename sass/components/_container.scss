@@ -19,15 +19,11 @@
         width: 300px;
     }
 
-.logo-wrapper{
-     order: 2;
-}
-
-    .tags {
-        max-width: 704px;
-
-        overflow: hidden;
+    .logo-wrapper {
+        order: 2;
     }
+
+
 
     .whole-char-wrapper {
         flex-wrap: wrap;
@@ -42,139 +38,136 @@
         font-weight: 600;
     }
 
-.hero-btn{
-    margin-bottom: 40px;
-}
+    .hero-btn {
+        margin-bottom: 40px;
+    }
 
-    .footer-logo-piece-1{
-       position: relative;
-    top: 109px!important;
-}
+    .footer-logo-piece-1 {
+        position: relative;
+        top: 109px !important;
+    }
 
-.hero-title{
-    font-size: 60px!important;
-}
+    .hero-title {
+        font-size: 60px !important;
+    }
 
-.imgs-hero-ep{
-    width: 346px;
-height: 346px;
-border-radius: 50px;
-}
+    .imgs-hero-ep {
+        width: 346px;
+        height: 346px;
+        border-radius: 50px;
+    }
 
-    .footer-logo-piece-2{
-       position: relative;
-    left: 20px!important;
-}
+    .footer-logo-piece-2 {
+        position: relative;
+        left: 20px !important;
+    }
 
 
 }
 
 
 @media (min-width:335px) and (max-width:704px) {
-  .hero-wrapper {
+    .hero-wrapper {
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
     }
 
-       .container {
+    .container {
         max-width: 335px;
     }
 
-       .hero-text {
+    .hero-text {
         order: 3;
     }
 
-.logo-wrapper{
-     order: 2;
-}
-
-    .tags {
-        max-width: 335px;
-
-        overflow: hidden;
+    .logo-wrapper {
+        order: 2;
     }
 
-.hero-title{
-    font-size: 40px!important;
-}
 
-.hero-btn{
-    margin-bottom: 40px;
-}
+    .hero-title {
+        font-size: 40px !important;
+    }
 
-.inputs-wrapper{
-    flex-direction: column;
-}
+    .hero-btn {
+        margin-bottom: 40px;
+    }
 
-.main-input-name{
-    width: 335px!important;
-}
+    .inputs-wrapper {
+        flex-direction: column;
+    }
 
-.main-input-season{
-    width: 335px!important;
-}
+    .main-input-name {
+        width: 335px !important;
+    }
+
+    .main-input-season {
+        width: 335px !important;
+    }
+
     .whole-char-wrapper {
         flex-wrap: wrap;
     }
 
-.main-title{
-    font-size: 28px!important;
-font-weight: 600;
-line-height: 32px;
-}
+    .main-title {
+        font-size: 28px !important;
+        font-weight: 600;
+        line-height: 32px;
+    }
 
     .background-char {
         padding: 16px 10px 16px 10px !important;
     }
 
     .main-images-title {
-       color: rgba(250, 250, 250, 1);
-font-family: Montserrat;
-font-style: SemiBold;
-font-size: 28px;
-font-weight: 600;
-line-height: 32px;
+        color: rgba(250, 250, 250, 1);
+        font-family: Montserrat;
+        font-style: SemiBold;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 32px;
     }
 
-.header-search{
-    width: 43px;
-}
-
-.header-link{
-    width: 96px;
-height: 36px;
-}
-
-.footer-wrapper{
-    flex-wrap: wrap;
-}
-
-  .main-images-title {
-font-size: 28px!important;
-font-weight: 600;
-line-height: 32px;
+    .header-search {
+        width: 43px;
     }
-.modal-episodes {
-    width: 335px!important;
-    height: 570px!important;
+
+    .header-link {
+        width: 96px;
+        height: 36px;
+    }
+
+    .footer-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .main-images-title {
+        font-size: 28px !important;
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    .modal-episodes {
+        width: 335px !important;
+        height: 570px !important;
+    }
+
+    .modal-episodes-list {
+        height: 178px !important;
+    }
 }
 
-.modal-episodes-list {
-height: 178px!important;
-}
-}
+@media (min-width:1200px) {
+    // .background-char{
+    //    width: 308px;
+    //    height: 488px;
+    // }
 
-@media (min-width:1200px){
-// .background-char{
-//    width: 308px;
-//    height: 488px;
-// }
-
-.main-pictures{
-    width: 365px;
-height: 579px;
-}
+    .main-pictures {
+        width: 365px;
+        height: 579px;
+    }
 
 
 }

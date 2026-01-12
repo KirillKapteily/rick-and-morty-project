@@ -79,6 +79,11 @@ transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
     margin: 0 auto;
     margin-bottom: 128px;
     margin-top: 64px;
+     transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+     &:hover{
+        background-color: rgba(156, 201, 66, 0.836);
+    }
 }
 
 .episodes-list {
@@ -115,6 +120,17 @@ transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
     display: flex;
     gap: 10px;
 }
+
+.si2{
+  position: relative;
+  right: 40px;
+  top: 5px;
+  fill: none;
+  stroke: currentColor;
+//   fill: #0D171D;
+}
+
+
 
 .card-epi-p {
     color: white;
