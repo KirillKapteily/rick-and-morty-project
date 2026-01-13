@@ -21,8 +21,6 @@ async function loadData() {
         renderPosts(cards);
 
         page += 1;
-        console.log(cards);
-
     } catch (err) {
         console.log(err);
     }
@@ -96,15 +94,19 @@ async function searchEps() {
         episodesList.innerHTML = " ";
         let searched = await mainInputName.value.toLowerCase();
         const cards = await fetchAllEps();
-        console.log(cards);
         const filtered = cards.filter(episode =>
             episode.title.toLowerCase().includes(searched)
         );
 
-        if (searched !== filtered) {
-            episodesList.innerHTML = "<li></li>";
-        } else {
-            renderPosts(filtered)
+        if (filtered.length == 0) {
+            episodesList.innerHTML = `<li> 
+               <picture>
+                        <source srcset="./kirillimg/nosearchreses@1x.webp" media="(min-width: 320px) and (max-width:620px)">
+                        <source srcset="./kirillimg/nosearchreses@2x.webp" media="(min-width: 621px) and (max-width:1200px)">
+                        <source srcset="./kirillimg/nosearchreses@3x.webp" media="(min-width: 1201px)">
+                          <img src="./kirillimg/nosearchreses.webp" alt="Nope" width="388">
+                    </picture>
+                <p class="no-resess-text">Oops! Try looking for something else...</p></li>`;
         }
 
         renderPosts(filtered)
@@ -118,15 +120,12 @@ async function seasonEps() {
     try {
         let searched = mainInputSeason.value;
         const cards = await fetchAllEps();
-        // console.log(cards);
         const filtered = cards.filter(episode =>
             episode.season.toString().startsWith(searched)
         );
         episodesList.innerHTML = " ";
-        console.log(filtered);
 
         renderPosts(filtered)
-
     } catch (err) {
         console.log(err);
     }
@@ -153,16 +152,15 @@ async function searchEpsHeader() {
     try {
         let searched = await headerSearch.value.toLowerCase();
         const cards = await fetchPosts();
-        console.log(cards);
         const filtered = cards.filter(episode =>
             episode.title.toLowerCase().includes(searched)
         );
 
-        if (searched !== filtered) {
-            episodesList.innerHTML = "<li></li>";
-        } else {
-            renderPosts(filtered)
+        if (filtered.length == 0) {
+            episodesList.innerHTML = `<li> <img src="./kirillimg/nosearchreses.webp" alt="Nope">
+                <p class="no-resess-text">Oops! Try looking for something else...</p></li>`;
         }
+
         renderPosts(filtered)
     } catch (err) {
         console.log(err);
@@ -197,7 +195,7 @@ function matchBack() {
         episodes.push(id)
 
         let bgI = 0;
-    if (id <= 11) {
+        if (id <= 11) {
             bgI = 1;
         } else if (id <= 21) {
             bgI = 2;
@@ -205,7 +203,7 @@ function matchBack() {
             bgI = 3;
         } else if (id <= 41) {
             bgI = 4;
-        } else  {
+        } else {
             bgI = 5;
         }
 

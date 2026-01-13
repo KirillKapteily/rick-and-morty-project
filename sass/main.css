@@ -141,24 +141,26 @@ ul {
   align-items: center;
   background-color: rgb(13, 23, 29);
   padding-top: 24px;
+  background: rgb(20, 24, 44);
 }
 
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .search-wrapper {
   height: 23px;
   display: flex;
-  padding: 12px 24px 12px 24px;
+  padding: 10px 22px 10px 22px;
   border: 1px solid rgba(250, 250, 250, 0.3);
   border-radius: 1000px;
 }
 
 .header-search {
   color: white !important;
-  background-color: rgb(13, 23, 29);
+  background-color: rgb(20, 24, 44);
   border: none;
   width: 45px;
 }
@@ -207,6 +209,10 @@ ul {
   font-size: 14px;
   font-weight: 600;
   line-height: 18px;
+}
+
+.no-resess-text {
+  text-align: center;
 }
 
 .hero-episodes {
@@ -639,6 +645,8 @@ img {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+  bottom: 60px;
 }
 
 .tags-ico {
