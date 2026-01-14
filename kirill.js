@@ -1,4 +1,3 @@
-//new pagination
 const episodesList = document.querySelector(".episodes-list");
 const loadMoreBtn = document.querySelector(".load-more-btn");
 const mainInputName = document.querySelector(".main-input-name");
@@ -8,7 +7,6 @@ const modalEpisodes = document.querySelector(".modal-episodes");
 const backdrop = document.querySelector(".backdrop");
 
 loadMoreBtn.disabled = false;
-
 
 let page = 1;
 let perPage = 10;
@@ -22,7 +20,7 @@ async function loadData() {
 
         page += 1;
     } catch (err) {
-        console.log(err);
+        console.log("Who's afraid of little old me?"+err);
     }
 }
 
@@ -135,11 +133,7 @@ async function openEpsModal(event) {
     try {
         selectedCard = event.target.closest("li");
         const episodeId = selectedCard.dataset.episodeId;
-        console.log(selectedCard);
         const cards = await fetchAllChars(episodeId);
-
-
-        console.log(cards);
 
         renderModal(cards)
 
@@ -250,8 +244,6 @@ function closeModal(event) {
     if (!closeBtn) {
         return
     } else {
-        console.log(event.target.nodeName);
-
         modalEpisodes.style.display = "none";
         backdrop.style.display = "none";
     }
@@ -259,8 +251,6 @@ function closeModal(event) {
 }
 
 loadData();
-// fetchAllEps();
-// matchBack();
 document.addEventListener("DOMContentLoaded", matchBack)
 
 loadMoreBtn.addEventListener("click", loadData);

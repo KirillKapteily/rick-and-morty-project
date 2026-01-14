@@ -5,7 +5,7 @@
     border-bottom-right-radius: 50px;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -15,7 +15,7 @@ img{
     color: white;
     background-color: $backgroundColor;
     border-radius: 100px;
-    padding: 4px 17px 4px 17px; 
+    padding: 4px 17px 4px 17px;
 }
 
 .main-images-list {
@@ -38,11 +38,11 @@ img{
     padding: 12px 24px 12px 24px;
     background: rgba(161, 215, 55, 1);
     align-items: flex-end;
-      justify-content: end!important;
+    justify-content: end !important;
     justify-self: end;
-  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-     &:hover{
+    &:hover {
         background-color: rgba(156, 201, 66, 0.836);
     }
 }
@@ -51,6 +51,7 @@ img{
     background-color: $backgroundColorChar;
     border-radius: 100px;
     padding: 4px 17px 4px 17px;
+  text-shadow: rgb(0, 0, 0) 1px 0 5px;
 }
 
 .background-char {
@@ -73,18 +74,18 @@ img{
     margin-bottom: 128px;
 }
 
-.main-characters-title{
-     transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+.main-characters-title {
+    transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    &:hover{
+    &:hover {
         color: rgba(156, 201, 66, 0.836);
     }
 }
 
 .main-images-title {
     color: $white;
-     font-size: 44px;
-        font-weight: 600;
+    font-size: 44px;
+    font-weight: 600;
 }
 
 .slider-sect {
@@ -115,7 +116,6 @@ img{
     font-weight: 400;
     line-height: 18px;
     display: flex;
-    // justify-content: center;
     align-items: center;
 }
 
@@ -146,7 +146,6 @@ img{
 
 .hero-wrapper {
     display: flex;
-    // justify-content: center;
     align-items: center;
 }
 
@@ -161,21 +160,21 @@ img{
     padding: 20px 20px 20px 20px;
     display: flex;
     align-items: center;
-    justify-content: end!important;
+    justify-content: end !important;
     justify-self: end;
     border: 1px solid rgba(250, 250, 250, 0.5);
-     transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    &:hover{
+    &:hover {
         background-color: rgba(240, 248, 255, 0.156);
     }
 }
 
-.btn-wrapper{
+.btn-wrapper {
     padding-bottom: 64px;
 }
 
-.tags-wrapper{
+.tags-wrapper {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -183,13 +182,11 @@ img{
     bottom: 60px;
 }
 
-.tags-ico{
-  width: 1408px;
-     height: 173px;
+.tags-ico {
+    width: 1408px;
+    height: 173px;
 }
 
-.tags{
+.tags {
     overflow: hidden;
-    // width: 1408px!important;
-    // height: 173px!important;
 }
