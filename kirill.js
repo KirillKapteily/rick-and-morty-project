@@ -20,7 +20,7 @@ async function loadData() {
 
         page += 1;
     } catch (err) {
-        console.log("Who's afraid of little old me?"+err);
+        console.log("Who's afraid of little old me?" + err);
     }
 }
 
@@ -30,6 +30,9 @@ async function fetchPosts() {
         loadMoreBtn.disabled = "true"
         loadMoreBtn.textContent = "No more items left"
     }
+
+
+
 
     const response = await fetch(`https://rickandmortyapi.com/api/episode?page=${page}`);
     const data = await response.json();
@@ -96,6 +99,10 @@ async function searchEps() {
             episode.title.toLowerCase().includes(searched)
         );
 
+        if (filtered.length > 0) {
+            loadMoreBtn.style.display = "none"
+        }
+
         if (filtered.length == 0) {
             episodesList.innerHTML = `<li> 
                <picture>
@@ -122,7 +129,9 @@ async function seasonEps() {
             episode.season.toString().startsWith(searched)
         );
         episodesList.innerHTML = " ";
-
+        if (filtered.length > 0) {
+            loadMoreBtn.style.display = "none"
+        }
         renderPosts(filtered)
     } catch (err) {
         console.log(err);

@@ -659,6 +659,12 @@ img {
   overflow: hidden;
 }
 
+.hero-decor {
+  position: relative;
+  left: 650px;
+  top: 50px;
+}
+
 .social-ico {
   width: 56px;
   height: 56px;
