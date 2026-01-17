@@ -20,7 +20,7 @@ async function loadData() {
 
         page += 1;
     } catch (err) {
-        console.log("Who's afraid of little old me?" + err);
+        console.log("Who's afraid of little old me? " + err);
     }
 }
 
@@ -28,11 +28,8 @@ async function fetchPosts() {
     if (page === 3) {
         loadMoreBtn.style.background = " rgba(208, 208, 208, 1)";
         loadMoreBtn.disabled = "true"
-        loadMoreBtn.textContent = "No more items left"
+        loadMoreBtn.textContent = "No more items left..."
     }
-
-
-
 
     const response = await fetch(`https://rickandmortyapi.com/api/episode?page=${page}`);
     const data = await response.json();
@@ -220,7 +217,7 @@ function renderModal(eps) {
             const charactersMarkup = characters
                 .map(({ name, img }) => `
                     <li class="modal-episodes-item">
-                        <img src="${img}" alt="${name}" width="60">
+                        <img src="${img}" alt="${name}" width="60" class="modal-img">
                         <p class="modal-episodes-p">${name}</p>
                     </li>
  `).join("");
