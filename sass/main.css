@@ -215,6 +215,14 @@ ul {
   text-align: center;
 }
 
+.header-episodes-logo {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s, filter cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.header-episodes-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(6px 6px 20px #A1D737);
+}
+
 .hero-episodes {
   padding-top: 100px !important;
   padding-bottom: 126px !important;
@@ -238,6 +246,10 @@ ul {
   background: rgb(161, 215, 55);
   overflow: hidden;
   filter: drop-shadow(6px 6px 20px rgb(161, 215, 55));
+  transition: filter cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.imgs-hero-ep:hover {
+  filter: drop-shadow(6px 6px 30px #A1D737);
 }
 
 .hero, .hero-episodes {
@@ -377,9 +389,9 @@ ul {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 1s, background-color cubic-bezier(0.4, 0, 0.2, 1) 1s, visibility cubic-bezier(0.4, 0, 0.2, 1) 1s, -webkit-backdrop-filter cubic-bezier(0.4, 0, 0.2, 1) 1s;
+  transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 1s, backdrop-filter cubic-bezier(0.4, 0, 0.2, 1) 1s, background-color cubic-bezier(0.4, 0, 0.2, 1) 1s, visibility cubic-bezier(0.4, 0, 0.2, 1) 1s;
+  transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 1s, backdrop-filter cubic-bezier(0.4, 0, 0.2, 1) 1s, background-color cubic-bezier(0.4, 0, 0.2, 1) 1s, visibility cubic-bezier(0.4, 0, 0.2, 1) 1s, -webkit-backdrop-filter cubic-bezier(0.4, 0, 0.2, 1) 1s;
 }
 
 .modal-episodes-title {
@@ -468,6 +480,10 @@ ul {
   display: flex;
   justify-content: end !important;
   justify-self: end;
+}
+
+.modal-img {
+  border-radius: 8px;
 }
 
 .hero, .hero-episodes {
