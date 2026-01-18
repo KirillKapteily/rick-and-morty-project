@@ -23,6 +23,7 @@
 
                             <input type="search" placeholder="Search" class="search-input" id="search-input">
                         </div>
+
                     </div>
                     <ul class="ul-header">
                         <li>
@@ -52,82 +53,115 @@
         <div class="div-first-sec-img-main">
             <img src="./kirillimg/Tags.svg" alt="tags" class="img-scroll">
         </div>
+
         <section class="big-sec-main">
             <div class="container">
 
+                <!-- FILTER + CONTENT WRAPPER -->
                 <div class="filter">
+
+                    <!-- NAME -->
                     <div>
                         <span class="span-on-inp">Name</span>
                         <input type="text" class="enter-name-search padding-text-sec-main-big-select"
                             placeholder="Enter name">
                     </div>
 
-                    <div>
-                        <span class="span-on-inp">Status</span>
-                        <select id="statusSelect " class="select-main-sec padding-text-sec-main-big-select">
-                            <option value="alive" class="back-text-main">Alive</option>
-                            <option value="dead">Dead</option>
-                            <option value="unknown">Unknown</option>
-                        </select>
+                    <!-- DROPDOWNS (ONLY THIS IS FLEX) -->
+                    <div class="filter-main-sec">
+
+                        <div class="filter-item">
+                            <label>Status</label>
+                            <div class="dropdown" data-filter="status">
+                                <div class="dropdown-head">All</div>
+                                <div class="dropdown-list">
+                                    <div class="option" data-value="">All</div>
+                                    <div class="option" data-value="alive">Alive</div>
+                                    <div class="option" data-value="dead">Dead</div>
+                                    <div class="option" data-value="unknown">Unknown</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <label>Species</label>
+                            <div class="dropdown" data-filter="species">
+                                <div class="dropdown-head">All</div>
+                                <div class="dropdown-list">
+                                    <div class="option" data-value="">All</div>
+                                    <div class="option" data-value="human">Human</div>
+                                    <div class="option" data-value="alien">Alien</div>
+                                    <div class="option" data-value="mythological">Mythological Creature</div>
+                                    <div class="option" data-value="humanoid">Humanoid</div>
+                                    <div class="option" data-value="animal">Animal</div>
+                                    <div class="option" data-value="cronenberg">Cronenberg</div>
+                                    <div class="option" data-value="poopybutthole">Poopybutthole</div>
+                                    <div class="option" data-value="robot">Robot</div>
+                                    <div class="option" data-value="disease">Disease</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <label>Type</label>
+                            <div class="dropdown" data-filter="type">
+                                <div class="dropdown-head">All</div>
+                                <div class="dropdown-list">
+                                    <div class="option" data-value="">All</div>
+                                    <div class="option" data-value="parasite">Parasite</div>
+                                    <div class="option" data-value="human_with_ants_in_his_eyes">Human with ants in his
+                                        eyes</div>
+                                    <div class="option" data-value="superhuman">Superhuman</div>
+                                    <div class="option" data-value="genetic_experiment">Genetic experiment</div>
+                                    <div class="option" data-value="fish-person">Fish-Person</div>
+                                    <div class="option" data-value="cromulon">Cromulon</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-item">
+                            <label>Gender</label>
+                            <div class="dropdown" data-filter="gender">
+                                <div class="dropdown-head">All</div>
+                                <div class="dropdown-list">
+                                    <div class="option" data-value="">All</div>
+                                    <div class="option" data-value="female">Female</div>
+                                    <div class="option" data-value="male">Male</div>
+                                    <div class="option" data-value="genderless">Genderless</div>
+                                    <div class="option" data-value="unknown">Unknown</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div>
-                        <span class="span-on-inp">Species</span>
-                        <select id="statusSelect " class="select-main-sec padding-text-sec-main-big-select">
-                            <option value="Human">Human</option>
-                            <option value="Alien">Alien</option>
-                            <option value="Mythological Creature">Mythological Creature</option>
-                            <option value="Humanoid">Humanoid</option>
-                            <option value="Animal">Animal</option>
-                            <option value="Cronenberg">Cronenberg</option>
-                            <option value="Poopybutthole">Poopybutthole</option>
-                            <option value="Robot">Robot</option>
-                            <option value="Disease">Disease</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <span class="span-on-inp">Type</span>
-                        <select id="statusSelect " class="select-main-sec padding-text-sec-main-big-select">
-                            <option value="Parasite">Parasite</option>
-                            <option value="Human with ants in his eye">Human with ants in his eyes</option>
-                            <option value="Superhuman">Superhuman</option>
-                            <option value="Genetic experiment">Genetic experiment</option>
-                            <option value="dead">Fish-Person</option>
-                            <option value="Cromulon">Cromulon</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <span class="span-on-inp">Gender</span>
-                        <select id="statusSelect " class="select-main-sec padding-text-sec-main-big-select">
-                            <option value="All">All</option>
-                            <option value="Female">Female</option>
-                            <option value="Male">Male</option>
-                            <option value="Genderless">Genderless</option>
-                            <option value="Unknow">Unknow</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <script id="card-template" type="text/x-handlebars-template">
-                {{#each items}}
-                  <div class="card" data-name="{{name}}">
-                    <img class="img-characters-sec-main" src="{{image}}" alt="{{name}}">
-                    <h3 class="card-name">{{name}}</h3>
-                    <p>Species: {{species}}</p>
-                    <p>Location: {{location.name}}</p>
-                  </div>
-                {{/each}}
-              </script>
-
-
-            <div id="items-container" class="div-card-character"></div>
-
-            <div class="div-main-section-for-characters  more-characters-dis load-more-box">
-                <button id="load-more-btn" class="more-characters load-more-btn">Load more</button>
-            </div>
         </section>
+        <script id="card-template" type="text/x-handlebars-template">
+            {{#each items}}
+            <div class="card"
+  data-name="{{name}}"
+  data-status="{{status}}"
+  data-species="{{species}}"
+  data-type="{{type}}"
+  data-gender="{{gender}}">
+
+                <img class="img-characters-sec-main" src="{{image}}" alt="{{name}}">
+                <h3 class="card-name">{{name}}</h3>
+                <p>Species: {{species}}</p>
+                <p>Location: {{location.name}}</p>
+            </div>
+            {{/each}}
+        </script>
+
+        <div id="items-container" class="div-card-character"></div>
+        <div class="div-main-section-for-characters more-characters-dis load-more-box">
+            <button id="load-more-btn" class="more-characters load-more-btn">
+                Load more
+            </button>
+        </div>
+        </div>
+        </div>
+
     </main>
     <footer>
         <div class="container-footer">
