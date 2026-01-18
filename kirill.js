@@ -9,8 +9,6 @@ const backdrop = document.querySelector(".backdrop");
 loadMoreBtn.disabled = false;
 
 let page = 1;
-let perPage = 10;
-
 let episodeId = 1;
 
 async function loadData() {
@@ -107,7 +105,7 @@ async function searchEps() {
                         <source srcset="./kirillimg/nosearchreses@2x.webp" media="(min-width: 621px) and (max-width:1200px)">
                         <source srcset="./kirillimg/nosearchreses@3x.webp" media="(min-width: 1201px)">
                           <img src="./kirillimg/nosearchreses.webp" alt="Nope" width="388">
-                    </picture>
+                 </picture>
                 <p class="no-resess-text">Oops! Try looking for something else...</p></li>`;
         }
 
@@ -187,28 +185,30 @@ function renderPosts(episodes) {
 }
 
 function matchBack() {
-    let episodes = [];
+    let epsForMatch = [];
     const cardEpisodes = document.querySelectorAll(".card-episodes");
 
     cardEpisodes.forEach(card => {
         let id = Number(card.dataset.episodeId);
-        episodes.push(id)
+        epsForMatch.push(id);
 
-        let bgI = 0;
-        if (id <= 11) {
-            bgI = 1;
+        let backId = 0;
+
+        if (id < 11) {
+            backId = 1;
         } else if (id <= 21) {
-            bgI = 2;
+            backId = 2;
         } else if (id <= 31) {
-            bgI = 3;
+            backId = 3;
         } else if (id <= 41) {
-            bgI = 4;
+            backId = 4;
         } else {
-            bgI = 5;
+            backId = 5;
         }
 
-        card.style.backgroundImage = `url("./kirillimg/episodesimgs/epiback${bgI}.png")`
+        card.style.backgroundImage = `url("./kirillimg/episodesimgs/epiback${backId}.png")`;
     })
+
 }
 
 function renderModal(eps) {
