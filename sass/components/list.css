@@ -89,6 +89,121 @@ ul {
     height: 20px;
 }
 
+/* bxdbqegehw45h36j357j64h5g345657i8ok7jh6t */
+/* .filters {
+    display: flex;
+    gap: 1px;
+    align-items: flex-end;
+} */
+
+
+/* === FILTER WRAPPER === */
+/* Контейнер всіх фільтрів */
+.filter {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    /* щоб блоки не виходили за межі */
+}
+
+
+.filter-main-sec {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* окремий фільтр */
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 120px;
+    flex: 1 1 auto;
+
+}
+
+/* label */
+.filter-item label {
+    font-size: 13px;
+    color: #0e0707;
+    line-height: 1;
+}
+
+/* === DROPDOWN === */
+.dropdown {
+    position: relative;
+    width: 100%;
+    column-gap: 50px;
+
+    /* займає всю ширину батька */
+}
+
+/* кнопка */
+.dropdown-head {
+    padding: 10px 14px;
+    border-radius: 30px;
+
+    background-color: #fff;
+    border: 1px solid #1a0d0d;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+    box-sizing: border-box;
+    /* щоб padding не збільшував ширину */
+}
+
+/* список */
+.dropdown-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    background-color: #fff;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+
+    z-index: 100;
+
+    /* анімація */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: 0.2s ease;
+}
+
+/* відкритий стан */
+.dropdown.open .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* option */
+.dropdown-list .option {
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown-list .option:hover {
+    background-color: #f2f2f2;
+}
+
+
 /* .search-header {
     width: 124px;
     height: 42px;
@@ -300,7 +415,7 @@ select option {
 }
 
 .card.highlight {
-    outline: 3px solid #00ffcc;
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+    outline: 4px solid #00ffc8;
+    box-shadow: 0 0 25px #00ffc8;
     transition: 0.3s;
 }
