@@ -1,0 +1,95 @@
+const headerSearch = document.querySelector(".header-search");
+const modalChars = document.querySelector(".modal-chars");
+const modalList = document.querySelector(".modal-list");
+const backdrop = document.querySelector(".backdrop");
+const closeModalBtn = document.querySelector(".close-modal");
+const searchIco = document.querySelector(".search-ico");
+
+async function searchEps() {
+    try {
+        modalList.innerHTML = " ";
+        let searched = await headerSearch.value.toLowerCase();
+        const cards = await fetchAllEps();
+        const filtered = cards.filter(char =>
+            char.name.toLowerCase().includes(searched)
+        );
+
+        console.log(filtered);
+
+        renderChars(filtered)
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+
+async function fetchAllEps() {
+    let allEpis = [];
+    let gettin = "https://rickandmortyapi.com/api/character";
+
+
+
+    while (gettin) {
+        const resp = await fetch(gettin);
+        const data = await resp.json();
+
+        allEpis = [...allEpis, ...data.results];
+
+        gettin = data.info.next;
+
+        setInterval(() => {
+    
+}, 1000);
+    }
+
+    return allEpis.map(chars => ({
+        id: chars.id,
+        name: chars.name,
+        status: chars.status,
+        gender: chars.gender,
+        img: chars.image
+    }))
+}
+
+function renderChars(chars) {
+    const markup = chars
+        .map(({ name, status, gender, img }) => {
+            return `
+                        <li class="modal-item">
+                            <img src="${img}" alt="${name}" >
+                            <h3 class="modal-name">${name}</h3>
+                            <p class="modal-p">${gender}</p>
+                             <p class="modal-p">${status}</p>
+                        </li>
+                   `;
+        })
+        .join("");
+
+console.log(chars);
+
+
+
+modalList.innerHTML = markup;
+if (chars.length == 0) {
+  modalList.innerHTML = `<li> 
+     <picture>
+              <source srcset="./kirillimg/nosearchreses@1x.webp" media="(min-width: 320px) and (max-width:620px)">
+              <source srcset="./kirillimg/nosearchreses@2x.webp" media="(min-width: 621px) and (max-width:1200px)">
+              <source srcset="./kirillimg/nosearchreses@3x.webp" media="(min-width: 1201px)">
+                <img src="./kirillimg/nosearchreses.webp" alt="Nope" width="388">
+       </picture>
+      <p class="no-resess-text">Oops! Try looking for something else...</p></li>`;
+}
+    modalChars.style.display = "block";
+    backdrop.style.display = "block";
+}
+
+function closeModal() {
+            modalList.innerHTML = " ";
+    modalChars.style.display = "none";
+    backdrop.style.display = "none";
+}
+
+searchIco.addEventListener("click", searchEps)
+closeModalBtn.addEventListener("click", closeModal)

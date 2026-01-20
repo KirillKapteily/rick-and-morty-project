@@ -18,13 +18,13 @@ async function loadData() {
 
         page += 1;
     } catch (err) {
-        console.log(" 'Who's afraid of little old me?' ", err);
+        console.log("Who's afraid of little old me? " + err);
     }
 }
 
 async function fetchPosts() {
     if (page === 3) {
-        loadMoreBtn.style.background = " #d0d0d0";
+        loadMoreBtn.style.background = " rgba(208, 208, 208, 1)";
         loadMoreBtn.disabled = "true"
         loadMoreBtn.textContent = "No more items left..."
     }
@@ -82,7 +82,7 @@ async function fetchAllChars(episodeId) {
             name: char.name,
             img: char.image
         }))
-    }]
+    }];
 }
 
 async function searchEps() {
@@ -141,6 +141,25 @@ async function openEpsModal(event) {
 
         renderModal(cards)
 
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+async function searchEpsHeader() {
+    try {
+        let searched = await headerSearch.value.toLowerCase();
+        const cards = await fetchPosts();
+        const filtered = cards.filter(episode =>
+            episode.title.toLowerCase().includes(searched)
+        );
+
+        if (filtered.length == 0) {
+            episodesList.innerHTML = `<li> <img src="./kirillimg/nosearchreses.webp" alt="Nope">
+                <p class="no-resess-text">Oops! Try looking for something else...</p></li>`;
+        }
+
+        renderPosts(filtered)
     } catch (err) {
         console.log(err);
     }
