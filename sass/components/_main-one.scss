@@ -185,6 +185,7 @@ img {
 .tags-ico {
     width: 1408px;
     height: 173px;
+        z-index: 80;
 }
 
 .tags {
@@ -195,4 +196,39 @@ img {
     position: relative;
     left:650px;
     top: 50px;
+}
+
+.modal-name{
+        color: $white;
+}
+.modal-chars {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    top: 50%;
+    left: 50%;
+    width: 673px;
+    height: auto;
+    border-radius: 18px;
+    background: rgba(13, 23, 29, 1);
+    padding: 32px 32px 32px 32px;
+    border-radius: 18px;
+    background: rgba(13, 23, 29, 1);
+
+}
+
+.modal-p{
+    color: $white;
+}
+
+.modal-list {
+display: flex;   flex-wrap: wrap;
+    gap: 32px;
+    height: 500px;
+    overflow-y: auto;
+    padding-left: 0 !important;
+    list-style: none;
 }
