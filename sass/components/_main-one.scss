@@ -3,6 +3,7 @@
     padding-top: 54px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    z-index: -223;
 }
 
 img {
@@ -16,6 +17,11 @@ img {
     background-color: $backgroundColor;
     border-radius: 100px;
     padding: 4px 17px 4px 17px;
+}
+
+.main-item {
+    display: flex;
+    justify-content: center;
 }
 
 .main-images-list {
@@ -51,7 +57,7 @@ img {
     background-color: $backgroundColorChar;
     border-radius: 100px;
     padding: 4px 17px 4px 17px;
-  text-shadow: rgb(0, 0, 0) 1px 0 5px;
+    text-shadow: rgb(0, 0, 0) 1px 0 5px;
 }
 
 .background-char {
@@ -185,25 +191,26 @@ img {
 .tags-ico {
     width: 1408px;
     height: 173px;
-        z-index: 80;
+    z-index: 0;
 }
 
 .tags {
     overflow: hidden;
 }
 
-.hero-decor{
+.hero-decor {
     position: relative;
-    left:650px;
+    left: 650px;
     top: 50px;
 }
 
-.modal-name{
-        color: $white;
+.modal-name {
+    color: $white;
 }
+
 .modal-chars {
     display: none;
-    z-index: 100;
+    z-index: 100000000000000000;
     position: absolute;
     transform: translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -220,15 +227,35 @@ img {
 
 }
 
-.modal-p{
+.modal-p {
     color: $white;
 }
 
 .modal-list {
-display: flex;   flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     gap: 32px;
     height: 500px;
     overflow-y: auto;
     padding-left: 0 !important;
     list-style: none;
+}
+
+.no-resess-text-modal {
+    color: $white;
+
+}
+
+
+.modal-nosearch-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.no-resess-text-modal {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
