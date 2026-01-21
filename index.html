@@ -15,7 +15,7 @@
 </head>
 
 <body class="body-home">
-    <header class="header-my-home">
+    <header class="header-my-home" id="header">
         <div class="container">
             <div class="header-wrapper">
                 <ul class="header-list">
@@ -247,10 +247,15 @@
                 <p class="privacy">Privacy Policy Public Offering Agreement</p>
             </div>
         </div>
+        <button type="button" aria-label="do-top-btn" class="top-btn"
+                        onclick="window.location.href='#header';"><svg class="top-ico">
+                            <use href="./kirillimg/symbol-defs.svg#icon-down" width="40" height="40"></use>
+                        </svg></button>
 
     </footer>
     <script src="ci.js"></script>
     <script src="homesearch.js"></script>
+    <script src="downbtn.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 </body>
 
