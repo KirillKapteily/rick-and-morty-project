@@ -3,7 +3,7 @@
 
     &:hover {
         transform: scale(1.1);
-        filter: drop-shadow(6px 6px 20px #A1D737);
+        filter: drop-shadow(6px 6px 20px $backgroundColorChar);
     }
 }
 
@@ -14,29 +14,28 @@
 }
 
 .hero-btn {
-    border: 1px solid rgba(250, 250, 250, 0.3);
+    border: 1px solid #fafafa4d;
     border-radius: 1000px;
     color: $white;
-    background-color: rgba(240, 248, 255, 0);
+    background-color: #f0f8ff00;
     padding: 12px 24px 12px 24px;
     margin-top: 32px;
     transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover {
-        background-color: rgba(240, 248, 255, 0.156);
+        background-color: #f0f8ff28;
     }
 }
 
 .imgs-hero-ep {
     border-radius: 100px;
-    background: rgba(161, 215, 55, 1);
+    background: $backgroundColorChar;
     overflow: hidden;
-    filter: drop-shadow(6px 6px 20px rgba(161, 215, 55, 1));
-
-      transition: filter cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    filter: drop-shadow(6px 6px 20px $backgroundColorChar);
+    transition: filter cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 
     &:hover {
-        filter: drop-shadow(6px 6px 30px #A1D737);
+        filter: drop-shadow(6px 6px 30px $backgroundColorChar);
     }
 }
 
@@ -45,7 +44,7 @@
 }
 
 .hero-title {
-    color: rgba(250, 250, 250, 1);
+    color: $white;
     margin-bottom: 16px;
     font-style: SemiBold;
     font-size: 100px;
@@ -86,7 +85,7 @@
 .load-more-btn {
     padding: 12px 24px 12px 24px;
     border-radius: 1000px;
-    background: rgba(161, 215, 55, 1);
+    background: $backgroundColorChar;
     color: $backgroundColor;
     border: none;
     display: flex;
@@ -97,7 +96,7 @@
     transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover {
-        background-color: rgba(156, 201, 66, 0.836);
+        background-color: $backgroundColorCharHover;
     }
 }
 
@@ -112,7 +111,7 @@
 .card-episodes {
     width: 284px;
     height: 200px;
-    border: 2px solid rgba(161, 215, 55, 1);
+    border: 2px solid $backgroundColorChar;
     border-radius: 18px;
     background-color: #0D171D;
     background-image: url("../../kirillimg/episodesimgs/epiback1.png");
@@ -120,7 +119,7 @@
 }
 
 .card-epi-title {
-    color: rgba(161, 215, 55, 1);
+    color: $backgroundColorChar;
     font-family: Montserrat;
     font-style: SemiBold;
     font-size: 16px;
@@ -143,10 +142,8 @@
     stroke: currentColor;
 }
 
-
-
 .card-epi-p {
-    color: white;
+    color: $white;
 }
 
 .modal-episodes {
@@ -160,10 +157,9 @@
     width: 673px;
     height: auto;
     border-radius: 18px;
-    background: rgba(13, 23, 29, 1);
     padding: 32px 32px 32px 32px;
     border-radius: 18px;
-    background: rgba(13, 23, 29, 1);
+    background: $backgroundColor;
 
 }
 
@@ -179,7 +175,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.073);
+    background-color: #00000013;
     backdrop-filter: blur(10px);
     opacity: 1;
     transition:
@@ -190,7 +186,7 @@
 }
 
 .modal-episodes-title {
-    color: rgba(250, 250, 250, 1);
+    color: $white;
     font-family: Montserrat;
     font-style: SemiBold;
     font-size: 24px;
@@ -202,7 +198,7 @@
 }
 
 .modal-episodes-id {
-    color: rgba(250, 250, 250, 1);
+    color: $white;
     font-family: Montserrat;
     font-style: Regular;
     font-size: 16px;
@@ -213,7 +209,7 @@
 }
 
 .modal-episodes-airdate {
-    color: rgba(250, 250, 250, 1);
+    color: $white;
     font-family: Montserrat;
     font-style: Regular;
     font-size: 16px;
@@ -224,7 +220,7 @@
 }
 
 .modal-episodes-char-p {
-    color: rgba(250, 250, 250, 0.5);
+    color: #fafafa80;
     font-family: Montserrat;
     font-style: Regular;
     font-size: 12px;
@@ -235,7 +231,7 @@
 }
 
 .modal-episodes-p {
-    color: rgba(250, 250, 250, 1);
+    color: $white;
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
@@ -261,7 +257,7 @@
 }
 
 .modal-wrapper2 {
-    border: 2px solid rgba(161, 215, 55, 1);
+    border: 2px solid $backgroundColorChar;
     border-radius: 18px;
     padding: 32px 32px 32px 32px;
 }

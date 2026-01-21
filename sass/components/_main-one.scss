@@ -3,7 +3,6 @@
     padding-top: 54px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    z-index: -223;
 }
 
 img {
@@ -42,14 +41,14 @@ img {
     line-height: 18px;
     border: none;
     padding: 12px 24px 12px 24px;
-    background: rgba(161, 215, 55, 1);
+    background: $backgroundColorChar;
     align-items: flex-end;
     justify-content: end !important;
     justify-self: end;
     transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover {
-        background-color: rgba(156, 201, 66, 0.836);
+        background-color: $backgroundColorCharHover;
     }
 }
 
@@ -84,7 +83,7 @@ img {
     transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover {
-        color: rgba(156, 201, 66, 0.836);
+        color: $backgroundColorChar;
     }
 }
 
@@ -172,7 +171,7 @@ img {
     transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover {
-        background-color: rgba(240, 248, 255, 0.156);
+        background-color: #f0f8ff28;
     }
 }
 
@@ -210,7 +209,6 @@ img {
 
 .modal-chars {
     display: none;
-    z-index: 100000000000000000;
     position: absolute;
     transform: translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -223,7 +221,8 @@ img {
     background: rgba(13, 23, 29, 1);
     padding: 32px 32px 32px 32px;
     border-radius: 18px;
-    background: rgba(13, 23, 29, 1);
+    filter: drop-shadow(6px 6px 20px #ffffff0e);
+    border: rgba(240, 248, 255, 0.04) 1px solid;
 
 }
 
@@ -235,6 +234,8 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    justify-content: center;
+    margin: 0 auto;
     height: 500px;
     overflow-y: auto;
     padding-left: 0 !important;
@@ -243,7 +244,6 @@ img {
 
 .no-resess-text-modal {
     color: $white;
-
 }
 
 
