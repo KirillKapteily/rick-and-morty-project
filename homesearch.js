@@ -10,12 +10,10 @@ async function searchEps() {
     try {
         modalList.innerHTML = " ";
         let searched = await headerSearch.value.toLowerCase();
-        const cards = await fetchAllEps();
+        const cards = await fetchAllChars();
         const filtered = cards.filter(char =>
             char.name.toLowerCase().includes(searched)
         );
-
-        console.log(filtered);
 
         renderChars(filtered)
 
@@ -25,26 +23,20 @@ async function searchEps() {
 }
 
 
-async function fetchAllEps() {
-    let allEpis = [];
+async function fetchAllChars() {
+    let allChars = [];
     let gettin = "https://rickandmortyapi.com/api/character";
-
-
 
     while (gettin) {
         const resp = await fetch(gettin);
         const data = await resp.json();
 
-        allEpis = [...allEpis, ...data.results];
+        allChars = [...allChars, ...data.results];
 
         gettin = data.info.next;
-
-        setInterval(() => {
-
-        }, 1000);
     }
 
-    return allEpis.map(chars => ({
+    return allChars.map(chars => ({
         id: chars.id,
         name: chars.name,
         status: chars.status,
@@ -66,10 +58,6 @@ function renderChars(chars) {
                    `;
         })
         .join("");
-
-    console.log(chars);
-
-
 
     modalList.innerHTML = markup;
     if (chars.length == 0) {

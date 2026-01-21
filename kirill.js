@@ -206,7 +206,7 @@ function matchBack() {
             backId = 5;
         }
 
-        card.style.backgroundImage = `url("./kirillimg/episodesimgs/epiback${backId}.png")`;
+        card.style.backgroundImage = `url("./kirillimg/episodesimgs/epiback${backId}.webp")`;
     })
 
 }
