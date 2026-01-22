@@ -1,16 +1,33 @@
 .social-ico {
     width: 56px;
     height: 56px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .social-ico2 {
     width: 56px;
     height: 56px;
+
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+
+    &:hover {
+        transform: scale(1.1); //
+    }
 }
 
 .social-ico3 {
     width: 56px;
     height: 56px;
+
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .footer-nav-link-e {
