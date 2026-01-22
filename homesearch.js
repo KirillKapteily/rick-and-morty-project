@@ -8,7 +8,7 @@ const bodyHome = document.querySelector(".body-home");
 
 async function searchEps() {
     try {
-        modalList.innerHTML = " ";
+    modalList.innerHTML = " ";
         let searched = await headerSearch.value.toLowerCase();
         const cards = await fetchAllChars();
         const filtered = cards.filter(char =>
@@ -82,5 +82,5 @@ function closeModal() {
     bodyHome.style.overflow = "auto"
 }
 
-searchIco.addEventListener("click", searchEps)
-closeModalBtn.addEventListener("click", closeModal)
+searchIco.addEventListener("click", searchEps);
+closeModalBtn.addEventListener("click", closeModal);
