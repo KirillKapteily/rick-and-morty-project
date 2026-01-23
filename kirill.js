@@ -194,7 +194,7 @@ function matchBack() {
 
         let backId = 0;
 
-        if (id < 11) {
+        if (id < 12) {
             backId = 1;
         } else if (id <= 21) {
             backId = 2;
