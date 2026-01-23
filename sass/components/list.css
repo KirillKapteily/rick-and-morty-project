@@ -309,7 +309,9 @@ ul {
 .big-sec-main {
     margin-top: 100px;
 }
-
+.not-found{
+    width: ;
+}
 .span-on-inp {
     position: relative;
     bottom: 40px;

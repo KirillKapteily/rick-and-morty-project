@@ -45,7 +45,12 @@ async function fetchCharacters(reset = false) {
 
         nextPage++;
     } catch (e) {
-        container.innerHTML = "<p>Nothing found</p>";
+        container.innerHTML = `
+            <div class="not-found">
+                <img src="nothing-search.png" alt="Not Found" />
+                <p>Oops! Try looking for something else...</p>
+            </div>
+        `;
         loadMoreBtn.style.display = "none";
     }
 }
@@ -90,7 +95,6 @@ searchInput.addEventListener("input", e => {
     fetchCharacters(true);
 });
 
-/* FIRST LOAD*/
 fetchCharacters();
 // searching for name head
 const headerSearchInput = document.getElementById("search-input");
