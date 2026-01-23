@@ -9,7 +9,6 @@ let filters = {
     status: ""
 };
 
-/*РЕНДЕР КАРТКИ */
 function renderCard(item) {
     container.innerHTML += `
         <div class="card">
@@ -21,7 +20,6 @@ function renderCard(item) {
     `;
 }
 
-/*  ЗАПИТ ДО API */
 async function fetchCharacters(reset = false) {
     if (reset) {
         container.innerHTML = "";
@@ -94,3 +92,22 @@ searchInput.addEventListener("input", e => {
 
 /* FIRST LOAD*/
 fetchCharacters();
+// searching for name head
+const headerSearchInput = document.getElementById("search-input");
+const headerSearchBtn = document.querySelector(".search-btn");
+const cardsSection = document.getElementById("items-container");
+
+headerSearchBtn.addEventListener("click", () => {
+    const value = headerSearchInput.value.trim();
+
+    if (!value) return;
+
+    filters.name = value;
+    fetchCharacters(true);
+
+    cardsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+

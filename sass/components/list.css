@@ -11,6 +11,20 @@ ul {
     list-style: none;
 }
 
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.montserrat-sec {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .container {
     max-width: 1185px;
     width: 100%;
@@ -248,8 +262,14 @@ ul {
     margin-top: 40px;
 }
 
+/* @media (max-width:740px) {
+    .h1-rvevdsf {
+      
+    }
+} */
+
 .h1-rvevdsf {
-    font-size: 100px;
+    font-size: 90px;
     word-break: break-word;
 }
 
