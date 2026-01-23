@@ -118,7 +118,6 @@ ul {
     gap: 16px;
     align-items: flex-end;
     flex-wrap: wrap;
-    /* щоб блоки не виходили за межі */
 }
 
 
@@ -128,7 +127,6 @@ ul {
     flex-wrap: wrap;
 }
 
-/* окремий фільтр */
 .filter-item {
     display: flex;
     flex-direction: column;
@@ -138,23 +136,20 @@ ul {
 
 }
 
-/* label */
 .filter-item label {
     font-size: 13px;
     color: #0e0707;
     line-height: 1;
 }
 
-/* === DROPDOWN === */
 .dropdown {
     position: relative;
     width: 100%;
     column-gap: 50px;
 
-    /* займає всю ширину батька */
 }
 
-/* кнопка */
+
 .dropdown-head {
     padding: 10px 14px;
     border-radius: 30px;
@@ -172,10 +167,8 @@ ul {
     width: 150px;
     height: 50px;
     box-sizing: border-box;
-    /* щоб padding не збільшував ширину */
 }
 
-/* список */
 .dropdown-list {
     position: absolute;
     top: calc(100% + 8px);
@@ -189,15 +182,12 @@ ul {
     overflow: hidden;
 
     z-index: 100;
-
-    /* анімація */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-6px);
     transition: 0.2s ease;
 }
 
-/* відкритий стан */
 .dropdown.open .dropdown-list {
     opacity: 1;
     visibility: visible;
@@ -262,16 +252,20 @@ ul {
     margin-top: 40px;
 }
 
-/* @media (max-width:740px) {
-    .h1-rvevdsf {
-      
-    }
-} */
 
-.h1-rvevdsf {
-    font-size: 90px;
+
+.h1-head-big {
     word-break: break-word;
+    font-size: 90px;
 }
+
+@media (max-width:740px) {
+    .h1-head-big {
+        font-size: 70px;
+    }
+}
+
+
 
 .ul-header {
     position: relative;
@@ -307,6 +301,11 @@ ul {
     }
 }
 
+@media (max-width:700px) {
+    .col-wh-head {
+        font-size: 13px;
+    }
+}
 .big-sec-main {
     margin-top: 100px;
 }
