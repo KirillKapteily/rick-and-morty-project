@@ -5,27 +5,37 @@ const characters = {
     rick: {
         color: "#A1D737",
         bg: "#A1D737",
-        img: "rick"
+        img: "rick",
+        width:1450,
+         height: 604
     },
     morty: {
         color: "#A1D737",
         bg: "#0d171dff",
-        img: "mortysmith"
+        img: "mortysmith",
+         width:1450,
+         height: 604
     },
     summer: {
         color: "#A1D737",
         bg: "#daf836ff",
-        img: "summersmith"
+        img: "summersmith",  
+       width:1450,
+         height: 604
     },
     beth: {
         color: "#A1D737",
         bg: "#A1D737",
-        img: "bethsmit"
+        img: "bethsmit",
+        width:1450,
+         height: 604
     },
     jerry: {
         color: "#A1D737",
         bg: "#0d171dff",
-        img: "jerrysmith"
+        img: "jerrysmith",
+        width:1450,
+         height: 604
     }
 }
 
@@ -43,12 +53,12 @@ let selectImages = (name, title) => {
                               media="(min-width: 320px) and (max-width:620px)">
                            <source srcset="./kirillimg/charmainpic/${char.img}@2x.webp"
                                     media="(min-width: 621px) and (max-width:1200px)">
-                                <source srcset="./kirillimg/charmainpic/${char.img}@3x.webp" media="(min-width: 1201px)">
+                                <source srcset="./kirillimg/charmainpic/${char.img}@3x.webp" media="(min-width: 1201px)" width="${char.width}" height="${char.height}">
                               <img src="./kirillimg/charmainpic/${char.img}@3x.webp">
                             </picture>
     `
 }
-
+// width="1450" height="604"
 titles.forEach(title => {
     title.addEventListener("click", () => {
         selectImages(title.dataset.char, title)
