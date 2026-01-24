@@ -155,7 +155,6 @@ ul {
 }
 
 .search-wrapper {
-  height: 23px;
   display: flex;
   padding: 10px 22px 10px 22px;
   border: 1px solid rgba(250, 250, 250, 0.3019607843);
@@ -166,7 +165,7 @@ ul {
   color: white !important;
   background-color: #14182c;
   border: none;
-  width: 45px;
+  width: 60px;
 }
 
 .search-ico {
@@ -650,6 +649,11 @@ img {
 .main-list {
   padding-inline-start: 0px;
   list-style: none;
+}
+
+.maiiin {
+  width: 365px;
+  height: 579px;
 }
 
 .main-img {
