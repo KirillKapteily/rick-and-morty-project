@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -43,6 +45,7 @@ ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .div-head-img-search {
@@ -257,6 +260,7 @@ ul {
 .h1-head-big {
     word-break: break-word;
     font-size: 90px;
+    margin-bottom: 30px;
 }
 
 @media (max-width:740px) {
@@ -306,12 +310,11 @@ ul {
         font-size: 13px;
     }
 }
+
 .big-sec-main {
     margin-top: 100px;
 }
-.not-found{
-    width: ;
-}
+
 .span-on-inp {
     position: relative;
     bottom: 40px;
